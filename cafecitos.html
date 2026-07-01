@@ -7,221 +7,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --red:#E5141B;
-    --red-deep:#B00C12;
-    --white:#FFFFFF;
-    --paper:#FBF5F1;
-    --ink:#1A1110;
-    --roast:#6B3A1E;
-    --line:rgba(26,17,16,.14);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Archivo',system-ui,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  h1,h2,h3,.display{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-.01em;line-height:.95}
-  .mono{font-family:'Space Mono',monospace}
-
-  /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:var(--red);color:var(--white);
-    border-bottom:3px solid var(--ink)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brandmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
-  .brandmark img{width:38px;height:38px;border-radius:6px;display:block}
-  .brandmark b{font-family:'Archivo Black';font-size:1.05rem;letter-spacing:.02em}
-  .navlinks{display:flex;gap:26px}
-  .navlinks a{color:var(--white);text-decoration:none;font-weight:600;font-size:.8rem;
-    text-transform:uppercase;letter-spacing:.08em;opacity:.9;transition:opacity .2s}
-  .navlinks a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-  @media(max-width:680px){.navlinks{display:none}}
-
-  /* HERO */
-  header{background:var(--red);color:var(--white);position:relative;overflow:hidden;
-    padding:78px 0 92px}
-  header::after{content:"";position:absolute;right:-120px;bottom:-160px;width:460px;height:460px;
-    border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff5b4d,transparent 62%);opacity:.45}
-  .hero-grid{display:grid;grid-template-columns:1.45fr .9fr;gap:40px;align-items:center;position:relative;z-index:2}
-  .eyebrow{font-family:'Space Mono';font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
-    opacity:.92;margin-bottom:22px;display:flex;align-items:center;gap:10px}
-  .eyebrow::before{content:"";width:34px;height:2px;background:var(--white)}
-  header h1{font-size:clamp(3rem,8.5vw,6.2rem);text-transform:uppercase}
-  header h1 span{display:block}
-  header h1 .em{color:var(--ink)}
-  .lede{font-size:1.18rem;max-width:30ch;margin:26px 0 32px;opacity:.96;font-weight:500}
-  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{font-weight:700;text-decoration:none;padding:14px 26px;border-radius:2px;font-size:.92rem;
-    text-transform:uppercase;letter-spacing:.05em;transition:transform .15s,box-shadow .15s;display:inline-block}
-  .btn-solid{background:var(--ink);color:var(--white)}
-  .btn-ghost{background:transparent;color:var(--white);border:2px solid var(--white)}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-ghost:hover{background:var(--white);color:var(--red)}
-  .hero-logo{justify-self:center}
-  .hero-logo img{width:min(280px,70vw);border-radius:18px;
-    box-shadow:0 24px 60px rgba(0,0,0,.35);border:6px solid var(--white)}
-  @media(max-width:780px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-logo{justify-self:start}}
-
-  /* ORIGIN STRIP — signature */
-  .origin{background:var(--ink);color:var(--white);padding:46px 0}
-  .origin h2{font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:26px;
-    font-family:'Space Mono';font-weight:700;opacity:.7}
-  .track{display:flex;align-items:stretch;gap:0;border:1px solid rgba(255,255,255,.18);border-radius:4px;overflow:hidden}
-  .track .stop{flex:1;padding:22px 20px;border-right:1px solid rgba(255,255,255,.14);position:relative}
-  .track .stop:last-child{border-right:none;background:var(--red)}
-  .track .num{font-family:'Space Mono';font-size:.72rem;opacity:.55;letter-spacing:.1em}
-  .track .stop h3{font-size:1.15rem;margin:8px 0 4px;text-transform:uppercase}
-  .track .stop p{font-size:.82rem;opacity:.78;line-height:1.4}
-  .roastbar{height:8px;margin-top:18px;border-radius:99px;
-    background:linear-gradient(90deg,#cdb89a,#9b6a3f,#6b3a1e,#2c1810)}
-  @media(max-width:720px){.track{flex-direction:column}.track .stop{border-right:none;border-bottom:1px solid rgba(255,255,255,.14)}}
-
-  /* ABOUT */
-  .section{padding:84px 0}
-  .kicker{font-family:'Space Mono';font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--red);font-weight:700;margin-bottom:14px}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
-  .about-grid h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;margin-bottom:8px}
-  .about-grid p{font-size:1.05rem;margin-bottom:18px;max-width:46ch}
-  .pillars{display:grid;gap:18px}
-  .pill{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--red);
-    padding:22px 24px;border-radius:3px}
-  .pill h4{font-family:'Archivo Black';font-size:1.05rem;text-transform:uppercase;margin-bottom:6px}
-  .pill p{font-size:.94rem;margin:0;color:#473b39}
-  @media(max-width:780px){.about-grid{grid-template-columns:1fr;gap:34px}}
-
-  /* LOCALES */
-  .locales{background:var(--red);color:var(--white);padding:84px 0}
-  .locales .head{display:flex;justify-content:space-between;align-items:flex-end;
-    flex-wrap:wrap;gap:16px;margin-bottom:42px}
-  .locales h2{font-size:clamp(2.2rem,5vw,3.4rem);text-transform:uppercase}
-  .locales .head p{max-width:34ch;opacity:.95;font-weight:500}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  .card{background:var(--white);color:var(--ink);border-radius:4px;padding:26px;
-    display:flex;flex-direction:column;gap:8px;transition:transform .18s}
-  .card:hover{transform:translateY(-4px)}
-  .card .tag{font-family:'Space Mono';font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;
-    color:var(--red);font-weight:700}
-  .card.flag .tag{color:var(--roast)}
-  .card h3{font-size:1.4rem;text-transform:uppercase}
-  .card .addr{font-size:.96rem;color:#4a3e3c}
-  .card .city{margin-top:auto;font-family:'Space Mono';font-size:.74rem;letter-spacing:.08em;
-    text-transform:uppercase;color:#8a7a78;padding-top:12px;border-top:1px dashed var(--line)}
-  .card.flag{outline:3px solid var(--ink)}
-  .badge{align-self:flex-start;background:var(--ink);color:var(--white);font-family:'Space Mono';
-    font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:99px;font-weight:700}
-  @media(max-width:680px){.cards{grid-template-columns:1fr}}
-
-  /* MAP */
-  .map-section{padding:84px 0}
-  .map-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:18px;margin-bottom:30px}
-  .map-head h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase}
-  .coords{font-family:'Space Mono';font-size:.82rem;color:var(--roast);text-align:right;line-height:1.7}
-  .coords b{color:var(--red)}
-  .map-frame{border:4px solid var(--ink);border-radius:6px;overflow:hidden;
-    box-shadow:0 18px 44px rgba(26,17,16,.18);line-height:0}
-  .map-frame iframe{width:100%;height:440px;border:0;display:block}
-  .map-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-
-  /* PRODUCTOS */
-  .productos{padding:84px 0;background:var(--paper)}
-  .sec-head{margin-bottom:40px;max-width:48ch}
-  .sec-head h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;margin-bottom:8px}
-  .sec-head p{font-size:1.05rem;color:#4a3e3c}
-  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .prod{background:var(--white);border:1px solid var(--line);border-radius:5px;overflow:hidden;
-    display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
-  .prod:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(26,17,16,.12)}
-  .prod .top{background:var(--red);color:var(--white);padding:26px 22px;position:relative;overflow:hidden}
-  .prod .top::after{content:"";position:absolute;right:-30px;bottom:-40px;width:120px;height:120px;
-    border-radius:50%;background:rgba(255,255,255,.12)}
-  .prod .roast-tag{font-family:'Space Mono';font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
-  .prod .top h3{font-size:1.5rem;text-transform:uppercase;margin-top:8px;position:relative;z-index:2}
-  .prod .body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
-  .prod .desc{font-size:.92rem;color:#473b39}
-  .prod .meta{font-family:'Space Mono';font-size:.74rem;color:#8a7a78;text-transform:uppercase;letter-spacing:.06em}
-  .prod .price{font-family:'Archivo Black';font-size:1.4rem;margin-top:auto}
-  .prod .price small{font-family:'Space Mono';font-size:.7rem;color:#8a7a78;font-weight:400}
-  @media(max-width:860px){.prod-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.prod-grid{grid-template-columns:1fr}}
-
-  .wa{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#06351b;
-    font-weight:700;text-decoration:none;padding:13px 20px;border-radius:3px;font-size:.9rem;
-    text-transform:uppercase;letter-spacing:.04em;transition:transform .15s,filter .15s;cursor:pointer;border:none}
-  .wa:hover{transform:translateY(-2px);filter:brightness(1.05)}
-  .wa svg{width:18px;height:18px;fill:#06351b}
-  .wa.block{justify-content:center;width:100%}
-
-  /* ACTIVIDADES */
-  .actividades{padding:84px 0;background:var(--ink);color:var(--white)}
-  .actividades .sec-head p{color:rgba(255,255,255,.78)}
-  .act-list{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.16)}
-  .act{display:grid;grid-template-columns:140px 1fr;gap:28px;padding:26px 0;
-    border-bottom:1px solid rgba(255,255,255,.16);align-items:baseline}
-  .act .when{font-family:'Space Mono';font-size:.78rem;letter-spacing:.06em;color:#ff7a6e;text-transform:uppercase}
-  .act h3{font-size:1.45rem;text-transform:uppercase;margin-bottom:6px}
-  .act p{font-size:.96rem;opacity:.82;max-width:60ch}
-  @media(max-width:620px){.act{grid-template-columns:1fr;gap:8px}}
-
-  /* CURSOS */
-  .cursos{padding:84px 0;background:var(--paper)}
-  .curso-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:54px}
-  .curso{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--red);
-    border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:10px}
-  .curso .lvl{font-family:'Space Mono';font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:700}
-  .curso h3{font-size:1.5rem;text-transform:uppercase}
-  .curso p{font-size:.95rem;color:#473b39}
-  .curso .facts{display:flex;gap:18px;flex-wrap:wrap;font-family:'Space Mono';font-size:.76rem;
-    color:#8a7a78;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
-  .curso .facts b{color:var(--ink)}
-  .curso .wa{margin-top:auto;align-self:flex-start}
-  @media(max-width:680px){.curso-grid{grid-template-columns:1fr}}
-
-  /* FORM */
-  .form-card{background:var(--red);color:var(--white);border-radius:6px;padding:42px;
-    display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
-  .form-card .intro h3{font-size:1.9rem;text-transform:uppercase;margin-bottom:12px}
-  .form-card .intro p{opacity:.95;font-size:1rem;max-width:34ch}
-  .form-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field.full{grid-column:1 / -1}
-  .field label{font-family:'Space Mono';font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;opacity:.92}
-  .field input,.field select,.field textarea{background:var(--white);color:var(--ink);border:none;
-    border-radius:3px;padding:12px 14px;font-family:'Archivo',sans-serif;font-size:.95rem}
-  .field textarea{resize:vertical;min-height:74px}
-  .field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--ink)}
-  .form-note{grid-column:1 / -1;font-family:'Space Mono';font-size:.72rem;opacity:.85;margin-top:2px}
-  @media(max-width:780px){.form-card{grid-template-columns:1fr;gap:26px;padding:30px}.form-fields{grid-template-columns:1fr}}
-
-  /* FOOTER */
-  footer{background:var(--ink);color:var(--white);padding:56px 0 40px}
-  .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
-  .foot-grid .brandmark b{color:var(--white)}
-  footer .small{font-family:'Space Mono';font-size:.74rem;opacity:.6;letter-spacing:.04em}
-  footer a{color:var(--white)}
-</style>
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="LOGO.JPG">
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="brandmark"><img src="data:image/jpeg;base64,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" alt="C&C Cafecitos"><b>C&amp;C&nbsp;CAFECITOS</b></a>
+    <a href="#top" class="brandmark"><img src="LOGO.jpg" alt="CCafecitos"><b>C&amp;C&nbsp;CAFECITOS</b></a>
     <div class="navlinks">
       <a href="#somos">Quiénes somos</a>
-      <a href="#productos">Productos</a>
+      <a href="#catalogo">Catálogo</a>
       <a href="#actividades">Actividades</a>
       <a href="#cursos">Cursos</a>
-      <a href="#mapa">Cómo llegar</a>
+      <a href="#locales">Cómo llegar</a>
     </div>
   </div>
 </nav>
+
 
 <header id="top">
   <div class="wrap hero-grid">
@@ -235,89 +38,97 @@
       </div>
     </div>
     <div class="hero-logo">
-      <img src="data:image/jpeg;base64,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" alt="Logo C&C Cafecitos">
+      <img src="LOGO.jpg"Logo C&C Cafecitos">
     </div>
   </div>
 </header>
 
-<section class="origin">
-  <div class="wrap">
-    <h2>El recorrido del grano</h2>
-    <div class="track">
-      <div class="stop"><div class="num">01 / ORIGEN</div><h3>Colombia</h3><p>Granos verdes de finca, seleccionados en origen.</p></div>
-      <div class="stop"><div class="num">02 / ORIGEN</div><h3>Brasil</h3><p>Cuerpo y dulzor que definen la base de la mezcla.</p></div>
-      <div class="stop"><div class="num">03 / ORIGEN</div><h3>Etiopía</h3><p>Notas florales y frutales, la chispa de la taza.</p></div>
-      <div class="stop"><div class="num">04 / AQUÍ</div><h3>Tostado en casa</h3><p>Lo tostamos en nuestro centro de operaciones. Frescura garantizada.</p></div>
-    </div>
-    <div class="roastbar" title="Del grano verde al tueste"></div>
-  </div>
-</section>
+<!-- Franja fotográfica entre secciones — reemplaza cada src con tu imagen real -->
+<div class="foto-franja" role="img" aria-label="Fotos de C&C Cafecitos">
+  <figure>
+    <img src="assets/fotos/tienda-01.png" alt="Tostaduría C&C Cafecitos" loading="lazy">
+    <figcaption>Tostaduría</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/fotos/tienda-02.jpeg" alt="Interior del local Esmeralda" loading="lazy">
+    <figcaption>Local Esmeralda</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/fotos/tienda-03.png" alt="Preparando un espresso en C&C Cafecitos" loading="lazy">
+    <figcaption>Barra de espresso</figcaption>
+  </figure>
+</div>
 
 <section class="section" id="somos">
   <div class="wrap about-grid">
     <div>
       <div class="kicker">Qué es C&amp;C Cafecitos</div>
       <h2>No somos una cafetería cualquiera.</h2>
-      <p>Somos una cafetería de especialidad y tostaduría muy conocida en la zona del Valle del Aconcagua. A diferencia de las cafeterías tradicionales, las tostadurías compran el grano verde de distintas partes del mundo y lo tuestan ellas mismas.</p>
+      <p>En CCAFECITOS somos una cafetería de especialidad y tostaduría con una sólida trayectoria en el Valle del Aconcagua, reconocida por nuestro compromiso con la calidad, el profesionalismo y la excelencia en cada taza. Seleccionamos cuidadosamente cafés de origen provenientes de distintos países productores y realizamos el tueste de nuestros granos bajo estrictos estándares, garantizando un café fresco, equilibrado y con el máximo potencial de aroma y sabor.</p>
       <p>Eso asegura un café muchísimo más fresco, aromático y de mejor calidad. Y como hemos crecido bastante, hoy contamos con tres puntos clave en la zona.</p>
     </div>
-    <div class="pillars">
-      <div class="pill"><h4>Grano verde de origen</h4><p>Colombia, Brasil, Etiopía y más: traemos el grano verde de distintas partes del mundo.</p></div>
-      <div class="pill"><h4>Tostado propio</h4><p>Tostamos en nuestra propia tostaduría, controlando el punto de cada partida.</p></div>
-      <div class="pill"><h4>Para llevar a casa</h4><p>Vendemos los granos enteros o molidos a tu gusto, junto a rica pastelería.</p></div>
+    <div>
+      <!-- Foto de la tienda — reemplaza src con tu imagen real -->
+      <div class="about-foto">
+        <img src="assets\fotos\tienda-barra.jpeg" alt="Barra de espresso en C&C Cafecitos" loading="lazy">
+      </div>
+      <div class="pillars">
+        <div class="pill"><h4>Grano verde de origen</h4><p>Colombia, Brasil, Etiopía y más: traemos el grano verde de distintas partes del mundo.</p></div>
+        <div class="pill"><h4>Tostado propio</h4><p>Tostamos en nuestra propia tostaduría, controlando el punto de cada partida.</p></div>
+        <div class="pill"><h4>Para llevar a casa</h4><p>Vendemos los granos enteros o molidos a tu gusto, junto a rica pastelería.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="productos" id="productos">
+<section class="origin">
+  <div class="wrap">
+    <h2>Lo que encontrarás</h2>
+    <div class="track">
+      <div class="stop"><div class="num">01 / CAFÉ</div><h3>Cafés de especialidad</h3><p>Granos de Perú, Colombia y blends de espresso, tostados por nosotros.</p></div>
+      <div class="stop"><div class="num">02 / EQUIPOS</div><h3>Cafeteras</h3><p>Prensa francesa, moka e italianas para preparar en casa u oficina.</p></div>
+      <div class="stop"><div class="num">03 / MOLIENDA</div><h3>Molinillos</h3><p>Muelas cerámicas de precisión para moler justo antes de preparar.</p></div>
+      <div class="stop"><div class="num">04 / EXTRAS</div><h3>Tazas y accesorios</h3><p>Tazas Segafredo, distribuidores, filtros V60, lápiz de latte art y más.</p></div>
+    </div>
+    <div class="roastbar" title="Nuestro catálogo completo"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     CATÁLOGO — productos con búsqueda y filtros por categoría
+     Las tarjetas se generan con JavaScript desde el array CATALOGO.
+     Para agregar un producto nuevo, añade un objeto al array en el <script>.
+     ===================================================== -->
+<section class="catalogo" id="catalogo">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">Nuestros productos</div>
-      <h2>Llévate la tostaduría a casa</h2>
-      <p>Café en grano recién tostado, entero o molido a tu gusto. Pídelo por WhatsApp y lo dejamos listo para retiro o despacho.</p>
+      <div class="kicker">Catálogo</div>
+      <h2>Todo lo que tenemos</h2>
+      <p>Cafés de especialidad, cafeteras, molinillos, tazas y accesorios. Consulta disponibilidad directo por WhatsApp.</p>
     </div>
-    <div class="prod-grid">
 
-      <div class="prod">
-        <div class="top"><div class="roast-tag">Blend de la casa</div><h3>Aconcagua</h3></div>
-        <div class="body">
-          <p class="desc">Nuestra mezcla insignia: equilibrada, con cuerpo y dulzor. La favorita para todos los días.</p>
-          <p class="meta">Bolsa 250 g · Entero o molido</p>
-          <p class="price">$6.500 <small>/ 250 g</small></p>
-          <button class="wa block" onclick="pedir('Blend Aconcagua 250g')">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-            Comprar
-          </button>
-        </div>
+    <!-- Buscador y filtros de categoría -->
+    <div class="cat-controls">
+      <div class="cat-search-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="cat-search" class="cat-search" type="search"
+          placeholder="Buscar producto…" aria-label="Buscar en el catálogo">
       </div>
-
-      <div class="prod">
-        <div class="top"><div class="roast-tag">Origen · Etiopía</div><h3>Etiopía</h3></div>
-        <div class="body">
-          <p class="desc">Tueste claro de notas florales y frutales. Brillante y aromático, ideal en métodos de filtrado.</p>
-          <p class="meta">Bolsa 250 g · Entero o molido</p>
-          <p class="price">$8.900 <small>/ 250 g</small></p>
-          <button class="wa block" onclick="pedir('Café Etiopía 250g')">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-            Comprar
-          </button>
-        </div>
+      <div class="cat-filters" role="group" aria-label="Filtrar por categoría">
+        <button class="cat-btn active" onclick="setCatFiltro('Todas',this)">Todas</button>
+        <button class="cat-btn" onclick="setCatFiltro('Café',this)">Café</button>
+        <button class="cat-btn" onclick="setCatFiltro('Cafeteras',this)">Cafeteras</button>
+        <button class="cat-btn" onclick="setCatFiltro('Molinillos',this)">Molinillos</button>
+        <button class="cat-btn" onclick="setCatFiltro('Tazas',this)">Tazas</button>
+        <button class="cat-btn" onclick="setCatFiltro('Accesorios',this)">Accesorios</button>
       </div>
-
-      <div class="prod">
-        <div class="top"><div class="roast-tag">Origen · Colombia</div><h3>Colombia</h3></div>
-        <div class="body">
-          <p class="desc">Lavado, suave y con dulzor a caramelo. Un clásico versátil para espresso o filtrado.</p>
-          <p class="meta">Bolsa 250 g · Entero o molido</p>
-          <p class="price">$7.900 <small>/ 250 g</small></p>
-          <button class="wa block" onclick="pedir('Café Colombia 250g')">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-            Comprar
-          </button>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Las tarjetas se insertan aquí dinámicamente -->
+    <div class="catalogo-grid" id="catalogo-grid" aria-live="polite"></div>
   </div>
 </section>
 
@@ -327,6 +138,10 @@
       <div class="kicker" style="color:#ff7a6e">Actividades</div>
       <h2>Lo que pasa en el local</h2>
       <p>Catas, lanzamientos de microlotes y encuentros cafeteros. Esto es lo más reciente que hemos hecho.</p>
+    </div>
+    <!-- Foto panorámica — reemplaza src con tu imagen real -->
+    <div class="act-foto">
+      <img src="assets/fotos/tienda-cata.jpg" alt="Cata de cafés en C&C Cafecitos" loading="lazy">
     </div>
     <div class="act-list">
       <div class="act">
@@ -360,6 +175,11 @@
       <div class="kicker">Cursos</div>
       <h2>Aprende con nosotros</h2>
       <p>Cursos prácticos dictados en nuestra tostaduría. Escríbenos por WhatsApp para más información o inscríbete con el formulario.</p>
+    </div>
+
+    <!-- Foto panorámica — reemplaza src con tu imagen real -->
+    <div class="cursos-foto">
+      <img src="assets/fotos/tienda-cursos.jpg" alt="Curso de barismo en C&C Cafecitos" loading="lazy">
     </div>
 
     <div class="curso-grid">
@@ -447,60 +267,63 @@
 </section>
 
 <section class="locales" id="locales">
+  <a id="mapa" style="display:block;position:relative;top:-80px;visibility:hidden"></a>
   <div class="wrap">
     <div class="head">
       <h2>Nuestros locales</h2>
       <p>Tres puntos en el Valle del Aconcagua: dos ciudades, una misma frescura.</p>
     </div>
-    <div class="cards">
-      <div class="card flag">
-        <span class="badge">Local principal</span>
-        <div class="tag">Los Andes · Centro</div>
-        <h3>Esmeralda</h3>
-        <div class="addr">Esmeralda 1380, Los Andes — en pleno centro, sobre una de las calles principales.</div>
-        <div class="city">Los Andes, Chile</div>
-      </div>
-      <div class="card">
-        <div class="tag">Los Andes</div>
-        <h3>Santa Rosa</h3>
-        <div class="addr">Sucursal de barrio en Santa Rosa, para tu cafecito de todos los días.</div>
-        <div class="city">Los Andes, Chile</div>
-      </div>
-      <div class="card">
-        <div class="tag">Los Andes</div>
-        <h3>Tostaduría</h3>
-        <div class="addr">Nuestro centro de operaciones y tostaduría: el corazón donde nace cada tueste.</div>
-        <div class="city">Los Andes, Chile</div>
-      </div>
-      <div class="card">
-        <div class="tag">San Felipe</div>
-        <h3>Open Plaza</h3>
-        <div class="addr">Sucursal en el Mall Open Plaza, San Felipe.</div>
-        <div class="city">San Felipe, Chile</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="cards locales-3">
 
-<section class="map-section" id="mapa">
-  <div class="wrap">
-    <div class="map-head">
-      <div>
-        <div class="kicker">Cómo llegar</div>
-        <h2>Visítanos en Esmeralda</h2>
+      <div class="card flag has-foto">
+        <img class="card-foto" src="assets/fotos/local-esmeralda.jpg" alt="Local Esmeralda — C&C Cafecitos" loading="lazy">
+        <div class="card-body">
+          <span class="badge">Local principal</span>
+          <div class="tag">Los Andes · Centro</div>
+          <h3>Esmeralda</h3>
+          <div class="addr">Esmeralda 1380, Los Andes — en pleno centro, sobre una de las calles principales.</div>
+          <div class="local-map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Esmeralda%201380%2C%20Los%20Andes%2C%20Chile&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa local Esmeralda 1380, Los Andes"></iframe>
+          </div>
+          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=Esmeralda+1380,+Los+Andes,+Chile" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
       </div>
-      <div class="coords">
-        <b>ESMERALDA 1380</b><br>Los Andes, Chile · CP 2100000
+
+      <div class="card has-foto">
+        <img class="card-foto" src="assets/fotos/local-santarosa.jpg" alt="Local Santa Rosa — C&C Cafecitos" loading="lazy">
+        <div class="card-body">
+          <div class="tag">Los Andes</div>
+          <h3>Santa Rosa</h3>
+          <div class="addr">Sucursal de barrio en Santa Rosa, para tu cafecito de todos los días.</div>
+          <div class="local-map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=C%26C+Cafecitos+Santa+Rosa+Los+Andes+Chile&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa local Santa Rosa, Los Andes"></iframe>
+          </div>
+          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=C%26C+Cafecitos+Santa+Rosa+Los+Andes+Chile" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
       </div>
-    </div>
-    <div class="map-frame">
-      <iframe
-        src="https://www.google.com/maps?q=Esmeralda%201380,%20Los%20Andes,%20Chile&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Mapa de C&C Cafecitos en Esmeralda 1380, Los Andes"></iframe>
-    </div>
-    <div class="map-actions">
-      <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Esmeralda+1380,+Los+Andes,+Chile" target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+      <div class="card has-foto">
+        <img class="card-foto" src="assets/fotos/local-openplaza.jpg" alt="Local Open Plaza San Felipe — C&C Cafecitos" loading="lazy">
+        <div class="card-body">
+          <div class="tag">San Felipe</div>
+          <h3>Open Plaza</h3>
+          <div class="addr">Sucursal en el Mall Open Plaza, San Felipe.</div>
+          <div class="local-map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Mall+Open+Plaza+San+Felipe+Chile&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa Mall Open Plaza, San Felipe"></iframe>
+          </div>
+          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=Mall+Open+Plaza,+San+Felipe,+Chile" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -516,7 +339,7 @@
   /* === CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP ===
      Formato internacional sin "+", sin espacios. Chile = 56 + 9 + número.
      Ejemplo: +56 9 1234 5678  ->  '56912345678'                        */
-  const WHATSAPP = '56912345678';
+  const WHATSAPP = '56959645371';
 
   function abrirWA(texto){
     window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank');
@@ -545,6 +368,249 @@
     if(msg) t += '• Comentario: ' + msg + '\n';
     abrirWA(t);
   }
+
+/* =====================================================
+   CATÁLOGO — array de productos
+   Para agregar un producto nuevo, añade un objeto con este formato:
+   {
+     nombre:      "Nombre del producto",
+     categoria:   "Café" | "Cafeteras" | "Molinillos" | "Tazas" | "Accesorios",
+     descripcion: "Breve descripción del producto.",
+     precio:      "$XX.XXX",
+     imagen:      "assets/catalogo/nombre-del-archivo.jpg",
+     nota:        "Texto adicional opcional (ej: venta mínima, pack, etc.)"
+   }
+   ===================================================== */
+const CATALOGO = [
+
+  /* — CAFÉS — */
+  {
+    nombre:      'Perú Cajamarca',
+    categoria:   'Café',
+    descripcion: 'Café de altura con notas de frutos secos, chocolate y suave acidez cítrica.',
+    precio:      '$16.000',
+    imagen:      'assets/catalogo/peru-cajamarca.jpg',
+    nota:        ''
+  },
+  {
+    nombre:      'Colombia Huila',
+    categoria:   'Café',
+    descripcion: 'Perfil dulce y jugoso con acidez brillante. Excelente en filtrado y espresso.',
+    precio:      '$16.000',
+    imagen:      'assets/catalogo/colombia-huila.jpg',
+    nota:        ''
+  },
+  {
+    nombre:      'Línea Espresso / Barra Comercial',
+    categoria:   'Café',
+    descripcion: 'Blend diseñado para barra de alta demanda. Consistente, con cuerpo y crema abundante.',
+    precio:      '$35.000',
+    imagen:      'assets/fotos/cafebolivia2.jpeg',
+    nota:        'Venta mínima 3 kg'
+  },
+
+  /* — CAFETERAS — */
+  {
+    nombre:      'Cafetera Francesa 350 ml',
+    categoria:   'Cafeteras',
+    descripcion: 'Prensa francesa ideal para 1-2 tazas. Resalta el cuerpo y la textura del café.',
+    precio:      '$10.000',
+    imagen:      'https://amazonaws.ipos.mx/fotos/4135/producto/m_t_ebe4a63bec6143b4ab206f293e58f546_29012026080558.jpg',
+    nota:        ''
+  },
+  {
+    nombre:      'Cafetera Francesa 600 ml',
+    categoria:   'Cafeteras',
+    descripcion: 'Mayor capacidad para 3-4 tazas, perfecta para compartir en casa u oficina.',
+    precio:      '$16.000',
+    imagen:      'https://http2.mlstatic.com/D_NQ_NP_661719-MLC92294471218_092025-O.webp',
+    nota:        ''
+  },
+  {
+    nombre:      'Cafetera Italiana 350 ml',
+    categoria:   'Cafeteras',
+    descripcion: 'Moka clásica de aluminio. Extrae un espresso concentrado y aromático sobre la hornilla.',
+    precio:      '$24.000',
+    imagen:      'assets/fotos/cafeteraitaliana.jpeg',
+    nota:        ''
+  },
+  {
+    nombre:      'Cafetera 3 en 1 EasyWays ',
+    categoria:   'Cafeteras',
+    descripcion: 'Versátil: prepara espresso, café de filtro y cápsulas en un solo equipo compacto.',
+    precio:      '$149.990',
+    imagen:      'assets/fotos/cafetera3en1.jpeg',
+    nota:        ''
+  },
+
+  /* — MOLINILLOS — */
+  {
+    nombre:      'Molinillo Manual',
+    categoria:   'Molinillos',
+    descripcion: 'Muelas cerámicas con molienda precisa y ajustable. Silencioso y portátil.',
+    precio:      '$20.000',
+    imagen:      'https://http2.mlstatic.com/D_Q_NP_825118-MLU73695808151_122023-O.webp',
+    nota:        ''
+  },
+
+  /* — TAZAS — */
+  {
+    nombre:      'Taza Segafredo Espresso 60 ml',
+    categoria:   'Tazas',
+    descripcion: 'Porcelana gruesa que conserva la temperatura del espresso. Diseño clásico italiano.',
+    precio:      '$10.000',
+    imagen:      'assets/fotos/tazaz60ml.jpeg',
+    nota:        ''
+  },
+  {
+    nombre:      'Taza Segafredo Cappuccino 140 ml',
+    categoria:   'Tazas',
+    descripcion: 'Taza amplia y estable, ideal para cappuccino con espacio para latte art.',
+    precio:      '$10.900',
+    imagen:      'assets/fotos/tazaz140ml.jpeg',
+    nota:        ''
+  },
+  {
+    nombre:      'Taza Segafredo Latte 200 ml',
+    categoria:   'Tazas',
+    descripcion: 'Gran capacidad para latte o flat white. Asa ergonómica y porcelana resistente.',
+    precio:      '$12.500',
+    imagen:      'assets/fotos/tazaz200ml.jpeg',
+    nota:        ''
+  },
+
+  /* — ACCESORIOS — */
+  {
+    nombre:      'Distribuidor de café',
+    categoria:   'Accesorios',
+    descripcion: 'Herramienta para nivelar el café molido en el portafiltro y lograr extracción pareja.',
+    precio:      '$5.000',
+    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_809445-CBT110726976767_042026-P.webp',
+    nota:        ''
+  },
+  {
+    nombre:      'Pinchi para comandas',
+    categoria:   'Accesorios',
+    descripcion: 'Pincho metálico de barra para mantener ordenadas las comandas durante el servicio.',
+    precio:      '$5.100',
+    imagen:      'https://http2.mlstatic.com/D_NQ_NP_972810-CBT111421779033_052026-O.webp',
+    nota:        ''
+  },
+  {
+    nombre:      'Pinzas de acero inoxidable',
+    categoria:   'Accesorios',
+    descripcion: 'Pinzas de acero inoxidable para manejo higiénico de pasteles, azúcar y garnish.',
+    precio:      '$6.500',
+    imagen:      'https://http2.mlstatic.com/D_Q_NP_727244-CBT83891323164_042025-O.webp',
+    nota:        ''
+  },
+  {
+    nombre:      'Filtro V60 02 (50 unidades)',
+    categoria:   'Accesorios',
+    descripcion: 'Filtros de papel blancos tamaño 02 compatibles con la cafetera V60 Hario.',
+    precio:      '$8.000',
+    imagen:      'https://http2.mlstatic.com/D_NQ_NP_840187-MLB109976369019_042026-O.webp',
+    nota:        'Pack de 50 unidades'
+  },
+  {
+    nombre:      'Lápiz para Latte Art',
+    categoria:   'Accesorios',
+    descripcion: 'Punta fina de acero para crear diseños elaborados y precisos en la espuma de leche.',
+    precio:      '$8.000',
+    imagen:      'assets/catalogo/lapiz-latte-art.jpg',
+    nota:        ''
+  },
+  {
+    nombre:      'Tamping Mat',
+    categoria:   'Accesorios',
+    descripcion: 'Alfombrilla antideslizante de silicona para apoyar el portafiltro al prensar.',
+    precio:      '$13.000',
+    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_989433-MLC94389061597_102025-P.webp',
+    nota:        ''
+  }
+];
+
+  /* SVG de WhatsApp reutilizado en cada tarjeta */
+  const _WA_SVG = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>';
+
+  /* Estado del filtro y la búsqueda */
+  let _catFiltro   = 'Todas';
+  let _catBusqueda = '';
+
+  /* Elimina tildes para comparar sin acentos */
+  function _sinTildes(str){
+    return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  }
+
+  /* Genera y muestra las tarjetas según el filtro y búsqueda actuales */
+  function renderCatalogo(){
+    const grid    = document.getElementById('catalogo-grid');
+    const termino = _sinTildes(_catBusqueda);
+
+    const filtrados = CATALOGO.filter(function(p){
+      const coincideCategoria = _catFiltro === 'Todas' || p.categoria === _catFiltro;
+      const texto = _sinTildes(p.nombre + ' ' + p.descripcion + ' ' + p.categoria);
+      const coincideBusqueda  = !termino || texto.includes(termino);
+      return coincideCategoria && coincideBusqueda;
+    });
+
+    if(filtrados.length === 0){
+      grid.innerHTML = '<p class="cat-empty">No se encontraron productos para esa búsqueda.</p>';
+      return;
+    }
+
+    grid.innerHTML = filtrados.map(function(p){
+      /* Mensaje de WhatsApp con el nombre del producto */
+      var msg = encodeURIComponent(
+        'Hola, vi el producto *' + p.nombre + '* en su catálogo. ¿Está disponible? ¿Cuál es su precio actualizado?'
+      );
+      /* Nota opcional (ej: venta mínima, pack de unidades) */
+      var notaHtml = p.nota ? '<p class="cat-nota">' + p.nota + '</p>' : '';
+      /* Imagen con fallback cuando el archivo aún no existe */
+      var imgHtml  = '<img src="' + p.imagen + '" alt="' + p.nombre + '" loading="lazy" '
+        + 'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+        + '<div class="img-placeholder">☕</div>';
+
+      return '<article class="cat-card">'
+        + '<div class="img-wrap">' + imgHtml + '</div>'
+        + '<div class="cat-body">'
+        +   '<span class="cat-tag-badge">' + p.categoria + '</span>'
+        +   '<h3>' + p.nombre + '</h3>'
+        +   '<p class="cat-desc">' + p.descripcion + '</p>'
+        +   notaHtml
+        +   '<p class="cat-price">' + p.precio + '</p>'
+        +   '<a class="wa" href="https://wa.me/' + WHATSAPP + '?text=' + msg + '" '
+        +     'target="_blank" rel="noopener">'
+        +     _WA_SVG + ' Consultar disponibilidad'
+        +   '</a>'
+        + '</div>'
+        + '</article>';
+    }).join('');
+  }
+
+  /* Cambia el filtro de categoría activo */
+  function setCatFiltro(categoria, btnEl){
+    _catFiltro = categoria;
+    document.querySelectorAll('.cat-btn').forEach(function(b){ b.classList.remove('active'); });
+    btnEl.classList.add('active');
+    renderCatalogo();
+  }
+
+  /* Inicializar catálogo al cargar la página */
+  document.addEventListener('DOMContentLoaded', function(){
+    renderCatalogo();
+
+    /* Buscador con pequeño debounce para no re-renderizar en cada tecla */
+    var searchInput  = document.getElementById('cat-search');
+    var debounceTimer;
+    searchInput.addEventListener('input', function(){
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(function(){
+        _catBusqueda = searchInput.value.trim();
+        renderCatalogo();
+      }, 220);
+    });
+  });
 </script>
 </body>
 </html>
