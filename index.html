@@ -137,35 +137,19 @@
     <div class="sec-head">
       <div class="kicker" style="color:#ff7a6e">Actividades</div>
       <h2>Lo que pasa en el local</h2>
-      <p>Catas, lanzamientos de microlotes y encuentros cafeteros. Esto es lo más reciente que hemos hecho.</p>
+      <p>Catas, lanzamientos de microlotes y encuentros cafeteros. Este es el historial de lo que hemos vivido en el local.</p>
     </div>
     <!-- Foto panorámica — reemplaza src con tu imagen real -->
     <div class="act-foto">
       <img src="assets/fotos/tienda-cata.jpg" alt="Cata de cafés en C&C Cafecitos" loading="lazy">
     </div>
-    <div class="act-list">
-      <div class="act">
-        <div class="when">Junio 2026</div>
-        <div>
-          <h3>Cata de orígenes</h3>
-          <p>Probamos en paralelo nuestros granos de Colombia, Brasil y Etiopía para reconocer sus aromas y sabores característicos.</p>
-        </div>
-      </div>
-      <div class="act">
-        <div class="when">Mayo 2026</div>
-        <div>
-          <h3>Lanzamiento microlote Etiopía</h3>
-          <p>Presentamos en sociedad nuestra última partida de tueste claro, con degustación en métodos de filtrado.</p>
-        </div>
-      </div>
-      <div class="act">
-        <div class="when">Abril 2026</div>
-        <div>
-          <h3>Latte art en vivo</h3>
-          <p>Tarde abierta de latte art en el local de Esmeralda, con nuestros baristas mostrando sus mejores figuras.</p>
-        </div>
-      </div>
-    </div>
+    <!-- ===================================================================
+         HISTORIAL DE EVENTOS — se genera con JavaScript desde el array
+         EVENTOS (al final del documento, dentro del <script>).
+         Para agregar un nuevo evento, añade un objeto AL PRINCIPIO del
+         array EVENTOS. No hace falta tocar este HTML.
+         =================================================================== -->
+    <div class="act-list" id="eventos-list" aria-live="polite"></div>
   </div>
 </section>
 
@@ -174,7 +158,7 @@
     <div class="sec-head">
       <div class="kicker">Cursos</div>
       <h2>Aprende con nosotros</h2>
-      <p>Cursos prácticos dictados en nuestra tostaduría. Escríbenos por WhatsApp para más información o inscríbete con el formulario.</p>
+      <p>Cursos prácticos dictados en nuestra tostaduría: los próximos, los ya realizados, y un lugar para que nos dejes tus datos si quieres ser el primero en enterarte.</p>
     </div>
 
     <!-- Foto panorámica — reemplaza src con tu imagen real -->
@@ -182,85 +166,51 @@
       <img src="assets/fotos/tienda-cursos.jpg" alt="Curso de barismo en C&C Cafecitos" loading="lazy">
     </div>
 
-    <div class="curso-grid">
-      <div class="curso">
-        <div class="lvl">Nivel inicial</div>
-        <h3>Barismo inicial</h3>
-        <p>Fundamentos del espresso, molienda, dosis y extracción. Ideal para partir de cero.</p>
-        <div class="facts"><span>Duración <b>4 hrs</b></span><span>Cupos <b>limitados</b></span></div>
-        <button class="wa" onclick="infoCurso('Barismo inicial')">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Más info
-        </button>
+    <!-- =====================================================================
+         A. PRÓXIMOS CURSOS — se genera con JavaScript desde el array
+         PROXIMOS_CURSOS (dentro del <script>, al final del documento).
+         Si el array está vacío se muestra automáticamente el mensaje de
+         "no hay cursos programados". Para agregar un curso nuevo, añade un
+         objeto al array PROXIMOS_CURSOS. No hace falta tocar este HTML.
+         ===================================================================== -->
+    <div class="cursos-sub" id="proximos-cursos">
+      <div class="cursos-sub-head">
+        <div class="kicker">Próximos cursos</div>
       </div>
-      <div class="curso">
-        <div class="lvl">Nivel intermedio</div>
-        <h3>Métodos de filtrado</h3>
-        <p>V60, Chemex y prensa francesa. Aprende a sacar lo mejor de cada origen en casa.</p>
-        <div class="facts"><span>Duración <b>3 hrs</b></span><span>Incluye <b>degustación</b></span></div>
-        <button class="wa" onclick="infoCurso('Métodos de filtrado')">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Más info
-        </button>
-      </div>
-      <div class="curso">
-        <div class="lvl">Nivel intermedio</div>
-        <h3>Latte art</h3>
-        <p>Texturizado de leche y técnicas para lograr corazones, rosetas y tulipanes.</p>
-        <div class="facts"><span>Duración <b>3 hrs</b></span><span>Práctico <b>100%</b></span></div>
-        <button class="wa" onclick="infoCurso('Latte art')">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Más info
-        </button>
-      </div>
-      <div class="curso">
-        <div class="lvl">Avanzado</div>
-        <h3>Cata y análisis sensorial</h3>
-        <p>Entrena tu paladar: acidez, cuerpo, dulzor y aromas. Vocabulario de catación profesional.</p>
-        <div class="facts"><span>Duración <b>4 hrs</b></span><span>Cupos <b>8 personas</b></span></div>
-        <button class="wa" onclick="infoCurso('Cata y análisis sensorial')">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Más info
-        </button>
-      </div>
+      <div id="proximos-cursos-wrap" aria-live="polite"></div>
     </div>
 
-    <div class="form-card" id="inscripcion">
-      <div class="intro">
-        <h3>Inscríbete a un curso</h3>
-        <p>Completa tus datos y enviaremos tu inscripción directo a nuestro WhatsApp para confirmar cupo, fecha y valor.</p>
+    <!-- =====================================================================
+         B. HISTORIAL DE CURSOS — se genera con JavaScript desde el array
+         HISTORIAL_CURSOS. Para agregar un curso realizado, añade un objeto
+         AL PRINCIPIO del array HISTORIAL_CURSOS. No hace falta tocar este HTML.
+         ===================================================================== -->
+    <div class="cursos-sub" id="historial-cursos">
+      <div class="cursos-sub-head">
+        <div class="kicker">Historial de cursos</div>
+        <h3>Cursos ya realizados</h3>
       </div>
-      <div class="form-fields">
-        <div class="field">
-          <label for="f-nombre">Nombre completo</label>
-          <input id="f-nombre" type="text" placeholder="Tu nombre" autocomplete="name">
+      <div class="curso-grid" id="historial-cursos-grid" aria-live="polite"></div>
+    </div>
+
+    <!-- =====================================================================
+         C. LISTA DE INTERESADOS — botón grande de WhatsApp con mensaje
+         predefinido. El número se edita en la constante WHATSAPP del script.
+         ===================================================================== -->
+    <div class="cursos-sub" id="interesados">
+      <div class="cursos-sub-head">
+        <div class="kicker">Lista de interesados</div>
+        <h3>No te pierdas los próximos cursos</h3>
+      </div>
+      <div class="form-card cta">
+        <div class="intro">
+          <h3>Déjanos tus datos por WhatsApp</h3>
+          <p>Escríbenos y te avisaremos apenas tengamos nuevas fechas, cupos y valores disponibles.</p>
         </div>
-        <div class="field">
-          <label for="f-fono">Teléfono</label>
-          <input id="f-fono" type="tel" placeholder="+56 9 ..." autocomplete="tel">
-        </div>
-        <div class="field">
-          <label for="f-email">Correo electrónico</label>
-          <input id="f-email" type="email" placeholder="tucorreo@ejemplo.cl" autocomplete="email">
-        </div>
-        <div class="field">
-          <label for="f-curso">Curso de interés</label>
-          <select id="f-curso">
-            <option>Barismo inicial</option>
-            <option>Métodos de filtrado</option>
-            <option>Latte art</option>
-            <option>Cata y análisis sensorial</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="f-msg">Comentario (opcional)</label>
-          <textarea id="f-msg" placeholder="Cuéntanos tu disponibilidad o lo que necesites"></textarea>
-        </div>
-        <button class="wa block" onclick="inscribir()">
+        <button class="wa block" onclick="interesCursos()">
           <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Enviar inscripción por WhatsApp
+          Quiero recibir información
         </button>
-        <div class="form-note">Al enviar se abrirá WhatsApp con tu inscripción ya redactada para que la confirmes.</div>
       </div>
     </div>
   </div>
@@ -350,24 +300,111 @@
   function infoCurso(curso){
     abrirWA('¡Hola C&C Cafecitos! Me interesa el curso "' + curso + '". ¿Me cuentan fechas, valor y cupos?');
   }
-  function inscribir(){
-    const nombre = document.getElementById('f-nombre').value.trim();
-    const fono   = document.getElementById('f-fono').value.trim();
-    const email  = document.getElementById('f-email').value.trim();
-    const curso  = document.getElementById('f-curso').value;
-    const msg    = document.getElementById('f-msg').value.trim();
-    if(!nombre || !fono){
-      alert('Por favor completa al menos tu nombre y teléfono.');
-      return;
-    }
-    let t = '¡Hola C&C Cafecitos! Quiero inscribirme a un curso.\n\n';
-    t += '• Nombre: ' + nombre + '\n';
-    t += '• Teléfono: ' + fono + '\n';
-    if(email) t += '• Correo: ' + email + '\n';
-    t += '• Curso: ' + curso + '\n';
-    if(msg) t += '• Comentario: ' + msg + '\n';
-    abrirWA(t);
+  /* Botón de la "Lista de interesados": mensaje predefinido y fijo */
+  function interesCursos(){
+    abrirWA('Hola, me gustaría recibir información sobre los próximos cursos de Cafecitos.');
   }
+
+/* =====================================================
+   HISTORIAL DE EVENTOS — array de eventos del local
+   Para agregar un evento nuevo, añade un objeto AL PRINCIPIO
+   del array (el más reciente siempre va primero):
+   {
+     fecha:       "Mes AAAA",
+     titulo:      "Nombre del evento",
+     descripcion: "Breve relato de lo vivido en el evento."
+   }
+   ===================================================== */
+const EVENTOS = [
+  {
+    fecha:       '18 de mayo',
+    titulo:      'Velada de Cafecito',
+    descripcion: 'El local volvió a llenarse de café, conversaciones y buena energía durante una nueva noche de Cafecitos. Compartimos distintas preparaciones, conocimos nuevas caras y disfrutamos de un ambiente cercano que hizo de la velada una experiencia especial. Gracias a todos quienes nos acompañaron e hicieron posible este encuentro. ¡Nos vemos en la próxima!'
+  }
+];
+
+/* Genera el historial de eventos dentro de #eventos-list */
+function renderEventos(){
+  const cont = document.getElementById('eventos-list');
+  cont.innerHTML = EVENTOS.map(function(e){
+    return '<div class="act">'
+      +   '<div class="when">' + e.fecha + '</div>'
+      +   '<div>'
+      +     '<h3>' + e.titulo + '</h3>'
+      +     '<p>' + e.descripcion + '</p>'
+      +   '</div>'
+      + '</div>';
+  }).join('');
+}
+
+/* =====================================================
+   PRÓXIMOS CURSOS — array de cursos programados
+   Si el array queda vacío ( [] ), se muestra automáticamente
+   el mensaje "no tenemos cursos programados".
+   Para agregar un curso nuevo, añade un objeto con este formato:
+   {
+     lvl:         "Nivel inicial" | "Nivel intermedio" | "Avanzado",
+     titulo:      "Nombre del curso",
+     descripcion: "Breve descripción del curso.",
+     facts:       [ ["Etiqueta","Valor"], ["Etiqueta","Valor"] ]
+   }
+   ===================================================== */
+const PROXIMOS_CURSOS = [];
+
+/* Genera los próximos cursos, o el mensaje vacío si no hay ninguno */
+function renderProximosCursos(){
+  const wrap = document.getElementById('proximos-cursos-wrap');
+
+  if(PROXIMOS_CURSOS.length === 0){
+    wrap.innerHTML = '<p class="cat-empty">Aún no hay nada publicado por el momento.</p>';
+    return;
+  }
+
+  wrap.innerHTML = '<div class="curso-grid">' + PROXIMOS_CURSOS.map(function(c){
+    var factsHtml = c.facts.map(function(f){
+      return '<span>' + f[0] + ' <b>' + f[1] + '</b></span>';
+    }).join('');
+    var tituloEscapado = c.titulo.replace(/'/g, "\\'");
+
+    return '<div class="curso">'
+      +   '<div class="lvl">' + c.lvl + '</div>'
+      +   '<h3>' + c.titulo + '</h3>'
+      +   '<p>' + c.descripcion + '</p>'
+      +   '<div class="facts">' + factsHtml + '</div>'
+      +   '<button class="wa" onclick="infoCurso(\'' + tituloEscapado + '\')">'
+      +     _WA_SVG + ' Más info'
+      +   '</button>'
+      + '</div>';
+  }).join('') + '</div>';
+}
+
+/* =====================================================
+   HISTORIAL DE CURSOS — cursos ya realizados
+   Para agregar un curso realizado, añade un objeto AL PRINCIPIO
+   del array (el más reciente siempre va primero):
+   {
+     titulo:      "Nombre del curso",
+     descripcion: "Breve relato de cómo fue el curso."
+   }
+   ===================================================== */
+const HISTORIAL_CURSOS = [
+  {
+    titulo:      'Taller de Prensa Francesa ☕',
+    descripcion: 'Una nueva jornada de aprendizaje reunió a entusiastas del café en nuestro Taller de Prensa Francesa. Durante la sesión, los participantes conocieron distintas técnicas de preparación, resolvieron dudas y exploraron cómo pequeños cambios pueden influir en el perfil de sabor de cada taza. Ver a cada persona preparar su propia prensa y descubrir nuevas formas de disfrutar el café hizo de esta experiencia un encuentro enriquecedor. Gracias a todos quienes participaron y fueron parte de una nueva instancia para aprender, compartir y disfrutar juntos.'
+  }
+];
+
+/* Genera el historial de cursos dentro de #historial-cursos-grid */
+function renderHistorialCursos(){
+  const grid = document.getElementById('historial-cursos-grid');
+  grid.innerHTML = HISTORIAL_CURSOS.map(function(c){
+    return '<div class="curso">'
+      +   '<div class="lvl">Curso realizado</div>'
+      +   '<h3>' + c.titulo + '</h3>'
+      +   '<p>' + c.descripcion + '</p>'
+      + '</div>';
+  }).join('');
+}
 
 /* =====================================================
    CATÁLOGO — array de productos
@@ -389,7 +426,7 @@ const CATALOGO = [
     categoria:   'Café',
     descripcion: 'Café de altura con notas de frutos secos, chocolate y suave acidez cítrica.',
     precio:      '$16.000',
-    imagen:      'assets/catalogo/peru-cajamarca.jpg',
+    imagen:      'assets/fotos/perucajamarca.jpeg',
     nota:        ''
   },
   {
@@ -397,7 +434,7 @@ const CATALOGO = [
     categoria:   'Café',
     descripcion: 'Perfil dulce y jugoso con acidez brillante. Excelente en filtrado y espresso.',
     precio:      '$16.000',
-    imagen:      'assets/catalogo/colombia-huila.jpg',
+    imagen:      'assets/fotos/colombiahuila.jpeg',
     nota:        ''
   },
   {
@@ -485,7 +522,7 @@ const CATALOGO = [
     categoria:   'Accesorios',
     descripcion: 'Herramienta para nivelar el café molido en el portafiltro y lograr extracción pareja.',
     precio:      '$5.000',
-    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_809445-CBT110726976767_042026-P.webp',
+    imagen:      'assets/fotos/dcafe.png',
     nota:        ''
   },
   {
@@ -517,7 +554,7 @@ const CATALOGO = [
     categoria:   'Accesorios',
     descripcion: 'Punta fina de acero para crear diseños elaborados y precisos en la espuma de leche.',
     precio:      '$8.000',
-    imagen:      'assets/catalogo/lapiz-latte-art.jpg',
+    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_809445-CBT110726976767_042026-P.webp',
     nota:        ''
   },
   {
@@ -598,6 +635,9 @@ const CATALOGO = [
 
   /* Inicializar catálogo al cargar la página */
   document.addEventListener('DOMContentLoaded', function(){
+    renderEventos();
+    renderProximosCursos();
+    renderHistorialCursos();
     renderCatalogo();
 
     /* Buscador con pequeño debounce para no re-renderizar en cada tecla */

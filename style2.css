@@ -1,4 +1,4 @@
-:root{
+  :root{
     --red:#E5141B;
     --red-deep:#B00C12;
     --white:#FFFFFF;
@@ -319,3 +319,4 @@
     transition:transform .4s ease}
   .cursos-foto:hover img{transform:scale(1.03)}
   @media(max-width:600px){.cursos-foto{aspect-ratio:4/3}}
+  
