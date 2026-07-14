@@ -1,656 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C&C Cafecitos — Café de especialidad y tostaduría · Valle del Aconcagua</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="LOGO.JPG">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafecitos · Tostaduría y café de especialidad · Valle del Aconcagua</title>
+    <meta name="description" content="Cafecitos: tostaduría local y café de especialidad en el Valle del Aconcagua. Café fresco, aromático y maquinaria profesional para tu negocio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="icon" type="image/jpeg" href="LOGO.JPG" />
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <a href="#top" class="brandmark"><img src="LOGO.jpg" alt="CCafecitos"><b>C&amp;C&nbsp;CAFECITOS</b></a>
-    <div class="navlinks">
-      <a href="#somos">Quiénes somos</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#actividades">Actividades</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#locales">Cómo llegar</a>
-    </div>
-  </div>
-</nav>
+    <!-- ======== NAV ======== -->
+    <nav>
+        <div class="wrap">
+            <a href="index.html" class="brandmark">
+                <img src="LOGO.jpg" alt="Cafecitos" />
+                <b>CAFECITOS</b>
+            </a>
+            <div class="navlinks">
+                <a href="productos.html">Productos</a>
+                <a href="maquinas.html">Máquinas</a>
+                <a href="#actividades">Actividades</a>
+                <a href="#nosotros">Nosotros</a>
+            </div>
+            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quisiera%20recibir%20informaci%C3%B3n" target="_blank" rel="noopener" class="nav-wa">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </nav>
 
+    <!-- ======== HERO — FULLSCREEN ======== -->
+    <header id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Logo grande centrado -->
+            <div class="hero-logo-wrap">
+                <img src="LOGO.jpg" alt="Cafecitos · Tostaduría y café de especialidad" class="hero-logo" />
+            </div>
 
-<header id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">Café de especialidad · Tostaduría · Valle del Aconcagua</div>
-      <h1><span>Del grano</span><span class="em">verde</span><span>a tu taza.</span></h1>
-      <p class="lede">Compramos café verde de Colombia, Brasil y Etiopía, y lo tostamos nosotros mismos. Más fresco, más aromático, mejor café.</p>
-      <div class="cta-row">
-        <a href="#locales" class="btn btn-solid">Ver locales</a>
-        <a href="#mapa" class="btn btn-ghost">Cómo llegar</a>
-      </div>
-    </div>
-    <div class="hero-logo">
-      <img src="LOGO.jpg"Logo C&C Cafecitos">
-    </div>
-  </div>
-</header>
+            <!-- Texto principal -->
+            <h1 class="hero-title">Somos tu tostaduría local</h1>
+            <p class="hero-text">
+                Resaltamos lo mejor de cada origen. Te garantizamos un café fresco, aromático y de alta calidad, con el compromiso que tu negocio y tu casa merecen.
+            </p>
+            <p class="hero-highlight">El mejor café, la mejor máquina.</p>
 
-<!-- Franja fotográfica entre secciones — reemplaza cada src con tu imagen real -->
-<div class="foto-franja" role="img" aria-label="Fotos de C&C Cafecitos">
-  <figure>
-    <img src="assets/fotos/tienda-01.png" alt="Tostaduría C&C Cafecitos" loading="lazy">
-    <figcaption>Tostaduría</figcaption>
-  </figure>
-  <figure>
-    <img src="assets/fotos/tienda-02.jpeg" alt="Interior del local Esmeralda" loading="lazy">
-    <figcaption>Local Esmeralda</figcaption>
-  </figure>
-  <figure>
-    <img src="assets/fotos/tienda-03.png" alt="Preparando un espresso en C&C Cafecitos" loading="lazy">
-    <figcaption>Barra de espresso</figcaption>
-  </figure>
-</div>
+            <!-- Botones -->
+            <div class="hero-buttons">
+                <a href="productos.html" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Ver Productos
+                </a>
+                <a href="maquinas.html" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 7h16M4 12h10M4 17h6" />
+                        <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+                    </svg>
+                    Ver Máquinas
+                </a>
+            </div>
+        </div>
 
-<section class="section" id="somos">
-  <div class="wrap about-grid">
-    <div>
-      <div class="kicker">Qué es C&amp;C Cafecitos</div>
-      <h2>No somos una cafetería cualquiera.</h2>
-      <p>En CCAFECITOS somos una cafetería de especialidad y tostaduría con una sólida trayectoria en el Valle del Aconcagua, reconocida por nuestro compromiso con la calidad, el profesionalismo y la excelencia en cada taza. Seleccionamos cuidadosamente cafés de origen provenientes de distintos países productores y realizamos el tueste de nuestros granos bajo estrictos estándares, garantizando un café fresco, equilibrado y con el máximo potencial de aroma y sabor.</p>
-      <p>Eso asegura un café muchísimo más fresco, aromático y de mejor calidad. Y como hemos crecido bastante, hoy contamos con tres puntos clave en la zona.</p>
-    </div>
-    <div>
-      <!-- Foto de la tienda — reemplaza src con tu imagen real -->
-      <div class="about-foto">
-        <img src="assets\fotos\tienda-barra.jpeg" alt="Barra de espresso en C&C Cafecitos" loading="lazy">
-      </div>
-      <div class="pillars">
-        <div class="pill"><h4>Grano verde de origen</h4><p>Colombia, Brasil, Etiopía y más: traemos el grano verde de distintas partes del mundo.</p></div>
-        <div class="pill"><h4>Tostado propio</h4><p>Tostamos en nuestra propia tostaduría, controlando el punto de cada partida.</p></div>
-        <div class="pill"><h4>Para llevar a casa</h4><p>Vendemos los granos enteros o molidos a tu gusto, junto a rica pastelería.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Desplaza</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </header>
 
-<section class="origin">
-  <div class="wrap">
-    <h2>Lo que encontrarás</h2>
-    <div class="track">
-      <div class="stop"><div class="num">01 / CAFÉ</div><h3>Cafés de especialidad</h3><p>Granos de Perú, Colombia y blends de espresso, tostados por nosotros.</p></div>
-      <div class="stop"><div class="num">02 / EQUIPOS</div><h3>Cafeteras</h3><p>Prensa francesa, moka e italianas para preparar en casa u oficina.</p></div>
-      <div class="stop"><div class="num">03 / MOLIENDA</div><h3>Molinillos</h3><p>Muelas cerámicas de precisión para moler justo antes de preparar.</p></div>
-      <div class="stop"><div class="num">04 / EXTRAS</div><h3>Tazas y accesorios</h3><p>Tazas Segafredo, distribuidores, filtros V60, lápiz de latte art y más.</p></div>
-    </div>
-    <div class="roastbar" title="Nuestro catálogo completo"></div>
-  </div>
-</section>
+    <!-- ======== ACTIVIDADES, TALLERES Y CURSOS ======== -->
+    <section class="actividades" id="actividades">
+        <div class="wrap">
+            <div class="sec-head">
+                <span class="kicker">Cafecitos · Comunidad</span>
+                <h2>Talleres, actividades y cursos</h2>
+                <p>Aprende, comparte y vive el café con nosotros. Todos los meses tenemos actividades para todos los niveles.</p>
+            </div>
 
-<!-- =====================================================
-     CATÁLOGO — productos con búsqueda y filtros por categoría
-     Las tarjetas se generan con JavaScript desde el array CATALOGO.
-     Para agregar un producto nuevo, añade un objeto al array en el <script>.
-     ===================================================== -->
-<section class="catalogo" id="catalogo">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">Catálogo</div>
-      <h2>Todo lo que tenemos</h2>
-      <p>Cafés de especialidad, cafeteras, molinillos, tazas y accesorios. Consulta disponibilidad directo por WhatsApp.</p>
-    </div>
+            <div class="actividades-grid" id="actividades-grid">
+                <!-- Generado por JavaScript -->
+            </div>
 
-    <!-- Buscador y filtros de categoría -->
-    <div class="cat-controls">
-      <div class="cat-search-wrap">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <!-- CTA final de la sección -->
+            <div class="actividades-cta">
+                <div class="inscripcion-card">
+                    <h3>Inscríbete al siguiente curso</h3>
+                    <p>Completa tus datos y te contactaremos por WhatsApp con la información del curso o actividad.</p>
+                    <form id="inscripcion-form" class="inscripcion-form">
+                        <div class="form-row">
+                            <label>
+                                <span>Nombre</span>
+                                <input type="text" name="nombre" required />
+                            </label>
+                            <label>
+                                <span>Apellido</span>
+                                <input type="text" name="apellido" required />
+                            </label>
+                        </div>
+                        <label>
+                            <span>Curso o actividad</span>
+                            <input type="text" name="curso" required />
+                        </label>
+                        <label>
+                            <span>Fecha</span>
+                            <input type="date" name="fecha" required />
+                        </label>
+                        <button type="submit" class="btn btn-wa">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                            Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== NOSOTROS ======== -->
+    <section class="nosotros" id="nosotros">
+        <div class="wrap">
+            <div class="nosotros-grid">
+                <div class="nosotros-texto">
+                    <span class="kicker">Quiénes somos</span>
+                    <h2>Sobre nosotros</h2>
+                    <p>En <strong>Cafecitos</strong> somos una cafetería de especialidad y tostaduría con una sólida trayectoria en el Valle del Aconcagua, reconocida por nuestro compromiso con la calidad, el profesionalismo y la excelencia en cada taza.</p>
+                    <p>Seleccionamos cuidadosamente cafés de origen provenientes de distintos países productores y realizamos el tueste de nuestros granos bajo estrictos estándares, garantizando un café fresco, equilibrado y con el máximo potencial de aroma y sabor.</p>
+                    <div class="nosotros-badges">
+                        <span>📍 3 locales</span>
+                        <span>☕ Tostado propio</span>
+                        <span>🌍 Granos de origen</span>
+                        <span>🔧 Servicio técnico</span>
+                    </div>
+                    <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20ustedes" target="_blank" rel="noopener" class="btn btn-wa">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                        Conversemos
+                    </a>
+                </div>
+                <div class="nosotros-fotos">
+                    <img src="assets/fotos/tienda-barra.jpeg" alt="Barra de Cafecitos" loading="lazy" />
+                    <div class="nosotros-fotos-grid">
+                        <img src="assets/fotos/tienda-01.png" alt="Tostaduría Cafecitos" loading="lazy" />
+                        <img src="assets/fotos/tienda-02.jpeg" alt="Local Esmeralda" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="locales-section">
+                <div class="sec-head">
+                    <span class="kicker">Nuestros locales</span>
+                    <h2>Estamos en Los Andes y San Felipe</h2>
+                    <p>Visítanos en el centro de Los Andes, en nuestra sucursal de Santa Rosa y en Open Plaza San Felipe.</p>
+                </div>
+
+                <div class="locales-grid">
+                    <article class="map-card">
+                        <h3>Centro Los Andes</h3>
+                        <p>Esmeralda 1380, Los Andes.</p>
+                        <div class="map-embed">
+                            <iframe src="https://www.google.com/maps?q=Esmeralda%201380%2C%20Los%20Andes%2C%20Chile&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa local centro Los Andes"></iframe>
+                        </div>
+                    </article>
+
+                    <article class="map-card">
+                        <h3>Santa Rosa</h3>
+                        <p>Sucursal de barrio en Los Andes.</p>
+                        <div class="map-embed">
+                            <iframe src="https://www.google.com/maps?q=C%26C%20Cafecitos%20Santa%20Rosa%20Los%20Andes%20Chile&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa local Santa Rosa Los Andes"></iframe>
+                        </div>
+                    </article>
+
+                    <article class="map-card">
+                        <h3>Open Plaza San Felipe</h3>
+                        <p>Sucursal en el mall Open Plaza.</p>
+                        <div class="map-embed">
+                            <iframe src="https://www.google.com/maps?q=Mall%20Open%20Plaza%20San%20Felipe%20Chile&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa local San Felipe"></iframe>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CTA FINAL ======== -->
+    <section class="cta-final">
+        <div class="wrap">
+            <div class="cta-final-card">
+                <h2>¿Listo para llevar tu café al siguiente nivel?</h2>
+                <p>Contáctanos y te asesoramos con la mejor solución para tu negocio o para tu casa.</p>
+                <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20recibir%20asesor%C3%ADa" target="_blank" rel="noopener" class="btn btn-wa btn-large">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                    Hablar con un asesor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="wrap foot-grid">
+            <a href="index.html" class="brandmark"><img src="LOGO.jpg" alt="Cafecitos" /><b>CAFECITOS</b></a>
+            <div class="footer-info">
+                <p>Café de especialidad y tostaduría · Valle del Aconcagua, Chile</p>
+                <p>Esmeralda 1380, Los Andes · Santa Rosa · Open Plaza San Felipe</p>
+                <a href="https://wa.me/56959645371" target="_blank" rel="noopener">📱 +56 9 9596 45371</a>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20sus%20productos%20y%20servicios" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"></path>
         </svg>
-        <input id="cat-search" class="cat-search" type="search"
-          placeholder="Buscar producto…" aria-label="Buscar en el catálogo">
-      </div>
-      <div class="cat-filters" role="group" aria-label="Filtrar por categoría">
-        <button class="cat-btn active" onclick="setCatFiltro('Todas',this)">Todas</button>
-        <button class="cat-btn" onclick="setCatFiltro('Café',this)">Café</button>
-        <button class="cat-btn" onclick="setCatFiltro('Cafeteras',this)">Cafeteras</button>
-        <button class="cat-btn" onclick="setCatFiltro('Molinillos',this)">Molinillos</button>
-        <button class="cat-btn" onclick="setCatFiltro('Tazas',this)">Tazas</button>
-        <button class="cat-btn" onclick="setCatFiltro('Accesorios',this)">Accesorios</button>
-      </div>
-    </div>
+    </a>
 
-    <!-- Las tarjetas se insertan aquí dinámicamente -->
-    <div class="catalogo-grid" id="catalogo-grid" aria-live="polite"></div>
-  </div>
-</section>
+    <script>
+        const inscripcionForm = document.getElementById('inscripcion-form');
 
-<section class="actividades" id="actividades">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker" style="color:#ff7a6e">Actividades</div>
-      <h2>Lo que pasa en el local</h2>
-      <p>Catas, lanzamientos de microlotes y encuentros cafeteros. Este es el historial de lo que hemos vivido en el local.</p>
-    </div>
-    <!-- Foto panorámica — reemplaza src con tu imagen real -->
-    <div class="act-foto">
-      <img src="assets/fotos/tienda-cata.jpg" alt="Cata de cafés en C&C Cafecitos" loading="lazy">
-    </div>
-    <!-- ===================================================================
-         HISTORIAL DE EVENTOS — se genera con JavaScript desde el array
-         EVENTOS (al final del documento, dentro del <script>).
-         Para agregar un nuevo evento, añade un objeto AL PRINCIPIO del
-         array EVENTOS. No hace falta tocar este HTML.
-         =================================================================== -->
-    <div class="act-list" id="eventos-list" aria-live="polite"></div>
-  </div>
-</section>
+        if (inscripcionForm) {
+            inscripcionForm.addEventListener('submit', function (event) {
+                event.preventDefault();
 
-<section class="cursos" id="cursos">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">Cursos</div>
-      <h2>Aprende con nosotros</h2>
-      <p>Cursos prácticos dictados en nuestra tostaduría: los próximos, los ya realizados, y un lugar para que nos dejes tus datos si quieres ser el primero en enterarte.</p>
-    </div>
+                const data = new FormData(this);
+                const nombre = data.get('nombre')?.toString().trim() || '';
+                const apellido = data.get('apellido')?.toString().trim() || '';
+                const curso = data.get('curso')?.toString().trim() || '';
+                const fecha = data.get('fecha')?.toString().trim() || '';
 
-    <!-- Foto panorámica — reemplaza src con tu imagen real -->
-    <div class="cursos-foto">
-      <img src="assets/fotos/tienda-cursos.jpg" alt="Curso de barismo en C&C Cafecitos" loading="lazy">
-    </div>
+                const mensaje = `Hola Cafecitos, quiero inscribirme.\nNombre: ${nombre} ${apellido}\nCurso o actividad: ${curso}\nFecha: ${fecha}`;
+                const url = `https://wa.me/56959645371?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank', 'noopener,noreferrer');
+                this.reset();
+            });
+        }
 
-    <!-- =====================================================================
-         A. PRÓXIMOS CURSOS — se genera con JavaScript desde el array
-         PROXIMOS_CURSOS (dentro del <script>, al final del documento).
-         Si el array está vacío se muestra automáticamente el mensaje de
-         "no hay cursos programados". Para agregar un curso nuevo, añade un
-         objeto al array PROXIMOS_CURSOS. No hace falta tocar este HTML.
-         ===================================================================== -->
-    <div class="cursos-sub" id="proximos-cursos">
-      <div class="cursos-sub-head">
-        <div class="kicker">Próximos cursos</div>
-      </div>
-      <div id="proximos-cursos-wrap" aria-live="polite"></div>
-    </div>
+        /* =====================================================
+           ACTIVIDADES, TALLERES Y CURSOS
+           Para agregar una nueva actividad, añade un objeto al array.
+           ===================================================== */
+        const ACTIVIDADES = [{
+            titulo: 'Taller de Prensa Francesa',
+            descripcion: 'Aprende a preparar un café perfecto con prensa francesa. Técnicas, tiempos y secretos para resaltar los sabores.',
+            imagen: 'assets/fotos/tienda-cursos.jpg',
+            fecha: '10 de agosto'
+        }, {
+            titulo: 'Cata de Orígenes',
+            descripcion: 'Descubre las diferencias entre cafés de Colombia, Brasil y Etiopía. Una experiencia sensorial única.',
+            imagen: 'assets/fotos/tienda-cata.jpg',
+            fecha: '24 de agosto'
+        }];
 
-    <!-- =====================================================================
-         B. HISTORIAL DE CURSOS — se genera con JavaScript desde el array
-         HISTORIAL_CURSOS. Para agregar un curso realizado, añade un objeto
-         AL PRINCIPIO del array HISTORIAL_CURSOS. No hace falta tocar este HTML.
-         ===================================================================== -->
-    <div class="cursos-sub" id="historial-cursos">
-      <div class="cursos-sub-head">
-        <div class="kicker">Historial de cursos</div>
-        <h3>Cursos ya realizados</h3>
-      </div>
-      <div class="curso-grid" id="historial-cursos-grid" aria-live="polite"></div>
-    </div>
+        const grid = document.getElementById('actividades-grid');
 
-    <!-- =====================================================================
-         C. LISTA DE INTERESADOS — botón grande de WhatsApp con mensaje
-         predefinido. El número se edita en la constante WHATSAPP del script.
-         ===================================================================== -->
-    <div class="cursos-sub" id="interesados">
-      <div class="cursos-sub-head">
-        <div class="kicker">Lista de interesados</div>
-        <h3>No te pierdas los próximos cursos</h3>
-      </div>
-      <div class="form-card cta">
-        <div class="intro">
-          <h3>Déjanos tus datos por WhatsApp</h3>
-          <p>Escríbenos y te avisaremos apenas tengamos nuevas fechas, cupos y valores disponibles.</p>
-        </div>
-        <button class="wa block" onclick="interesCursos()">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
-          Quiero recibir información
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+        grid.innerHTML = ACTIVIDADES.map(a => `
+                <div class="actividad-card">
+                    <div class="actividad-img">
+                        <img src="${a.imagen}" alt="${a.titulo}" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        <span class="actividad-fecha">${a.fecha}</span>
+                    </div>
+                    <div class="actividad-body">
+                        <h3>${a.titulo}</h3>
+                        <p>${a.descripcion}</p>
+                        <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20taller%3A%20${encodeURIComponent(a.titulo)}" target="_blank" rel="noopener" class="btn btn-wa btn-small">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                            Consultar
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+    </script>
 
-<section class="locales" id="locales">
-  <a id="mapa" style="display:block;position:relative;top:-80px;visibility:hidden"></a>
-  <div class="wrap">
-    <div class="head">
-      <h2>Nuestros locales</h2>
-      <p>Tres puntos en el Valle del Aconcagua: dos ciudades, una misma frescura.</p>
-    </div>
-    <div class="cards locales-3">
-
-      <div class="card flag has-foto">
-        <img class="card-foto" src="assets/fotos/local-esmeralda.jpg" alt="Local Esmeralda — C&C Cafecitos" loading="lazy">
-        <div class="card-body">
-          <span class="badge">Local principal</span>
-          <div class="tag">Los Andes · Centro</div>
-          <h3>Esmeralda</h3>
-          <div class="addr">Esmeralda 1380, Los Andes — en pleno centro, sobre una de las calles principales.</div>
-          <div class="local-map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=Esmeralda%201380%2C%20Los%20Andes%2C%20Chile&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa local Esmeralda 1380, Los Andes"></iframe>
-          </div>
-          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=Esmeralda+1380,+Los+Andes,+Chile" target="_blank" rel="noopener">Cómo llegar</a>
-        </div>
-      </div>
-
-      <div class="card has-foto">
-        <img class="card-foto" src="assets/fotos/local-santarosa.jpg" alt="Local Santa Rosa — C&C Cafecitos" loading="lazy">
-        <div class="card-body">
-          <div class="tag">Los Andes</div>
-          <h3>Santa Rosa</h3>
-          <div class="addr">Sucursal de barrio en Santa Rosa, para tu cafecito de todos los días.</div>
-          <div class="local-map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=C%26C+Cafecitos+Santa+Rosa+Los+Andes+Chile&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa local Santa Rosa, Los Andes"></iframe>
-          </div>
-          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=C%26C+Cafecitos+Santa+Rosa+Los+Andes+Chile" target="_blank" rel="noopener">Cómo llegar</a>
-        </div>
-      </div>
-
-      <div class="card has-foto">
-        <img class="card-foto" src="assets/fotos/local-openplaza.jpg" alt="Local Open Plaza San Felipe — C&C Cafecitos" loading="lazy">
-        <div class="card-body">
-          <div class="tag">San Felipe</div>
-          <h3>Open Plaza</h3>
-          <div class="addr">Sucursal en el Mall Open Plaza, San Felipe.</div>
-          <div class="local-map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=Mall+Open+Plaza+San+Felipe+Chile&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa Mall Open Plaza, San Felipe"></iframe>
-          </div>
-          <a class="btn btn-solid local-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=Mall+Open+Plaza,+San+Felipe,+Chile" target="_blank" rel="noopener">Cómo llegar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap foot-grid">
-    <a href="#top" class="brandmark"><img src="data:image/jpeg;base64,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" alt="C&C Cafecitos"><b>C&amp;C CAFECITOS</b></a>
-    <div class="small">Café de especialidad y tostaduría · Valle del Aconcagua, Chile<br>Esmeralda 1380, Los Andes · Santa Rosa · Tostaduría · Mall Open Plaza, San Felipe</div>
-  </div>
-</footer>
-
-<script>
-  /* === CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP ===
-     Formato internacional sin "+", sin espacios. Chile = 56 + 9 + número.
-     Ejemplo: +56 9 1234 5678  ->  '56912345678'                        */
-  const WHATSAPP = '56959645371';
-
-  function abrirWA(texto){
-    window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank');
-  }
-  function pedir(producto){
-    abrirWA('¡Hola C&C Cafecitos! Quiero comprar: ' + producto + '. ¿Cómo coordinamos retiro o despacho?');
-  }
-  function infoCurso(curso){
-    abrirWA('¡Hola C&C Cafecitos! Me interesa el curso "' + curso + '". ¿Me cuentan fechas, valor y cupos?');
-  }
-  /* Botón de la "Lista de interesados": mensaje predefinido y fijo */
-  function interesCursos(){
-    abrirWA('Hola, me gustaría recibir información sobre los próximos cursos de Cafecitos.');
-  }
-
-/* =====================================================
-   HISTORIAL DE EVENTOS — array de eventos del local
-   Para agregar un evento nuevo, añade un objeto AL PRINCIPIO
-   del array (el más reciente siempre va primero):
-   {
-     fecha:       "Mes AAAA",
-     titulo:      "Nombre del evento",
-     descripcion: "Breve relato de lo vivido en el evento."
-   }
-   ===================================================== */
-const EVENTOS = [
-  {
-    fecha:       '18 de mayo',
-    titulo:      'Velada de Cafecito',
-    descripcion: 'El local volvió a llenarse de café, conversaciones y buena energía durante una nueva noche de Cafecitos. Compartimos distintas preparaciones, conocimos nuevas caras y disfrutamos de un ambiente cercano que hizo de la velada una experiencia especial. Gracias a todos quienes nos acompañaron e hicieron posible este encuentro. ¡Nos vemos en la próxima!'
-  }
-];
-
-/* Genera el historial de eventos dentro de #eventos-list */
-function renderEventos(){
-  const cont = document.getElementById('eventos-list');
-  cont.innerHTML = EVENTOS.map(function(e){
-    return '<div class="act">'
-      +   '<div class="when">' + e.fecha + '</div>'
-      +   '<div>'
-      +     '<h3>' + e.titulo + '</h3>'
-      +     '<p>' + e.descripcion + '</p>'
-      +   '</div>'
-      + '</div>';
-  }).join('');
-}
-
-/* =====================================================
-   PRÓXIMOS CURSOS — array de cursos programados
-   Si el array queda vacío ( [] ), se muestra automáticamente
-   el mensaje "no tenemos cursos programados".
-   Para agregar un curso nuevo, añade un objeto con este formato:
-   {
-     lvl:         "Nivel inicial" | "Nivel intermedio" | "Avanzado",
-     titulo:      "Nombre del curso",
-     descripcion: "Breve descripción del curso.",
-     facts:       [ ["Etiqueta","Valor"], ["Etiqueta","Valor"] ]
-   }
-   ===================================================== */
-const PROXIMOS_CURSOS = [];
-
-/* Genera los próximos cursos, o el mensaje vacío si no hay ninguno */
-function renderProximosCursos(){
-  const wrap = document.getElementById('proximos-cursos-wrap');
-
-  if(PROXIMOS_CURSOS.length === 0){
-    wrap.innerHTML = '<p class="cat-empty">Aún no hay nada publicado por el momento.</p>';
-    return;
-  }
-
-  wrap.innerHTML = '<div class="curso-grid">' + PROXIMOS_CURSOS.map(function(c){
-    var factsHtml = c.facts.map(function(f){
-      return '<span>' + f[0] + ' <b>' + f[1] + '</b></span>';
-    }).join('');
-    var tituloEscapado = c.titulo.replace(/'/g, "\\'");
-
-    return '<div class="curso">'
-      +   '<div class="lvl">' + c.lvl + '</div>'
-      +   '<h3>' + c.titulo + '</h3>'
-      +   '<p>' + c.descripcion + '</p>'
-      +   '<div class="facts">' + factsHtml + '</div>'
-      +   '<button class="wa" onclick="infoCurso(\'' + tituloEscapado + '\')">'
-      +     _WA_SVG + ' Más info'
-      +   '</button>'
-      + '</div>';
-  }).join('') + '</div>';
-}
-
-/* =====================================================
-   HISTORIAL DE CURSOS — cursos ya realizados
-   Para agregar un curso realizado, añade un objeto AL PRINCIPIO
-   del array (el más reciente siempre va primero):
-   {
-     titulo:      "Nombre del curso",
-     descripcion: "Breve relato de cómo fue el curso."
-   }
-   ===================================================== */
-const HISTORIAL_CURSOS = [
-  {
-    titulo:      'Taller de Prensa Francesa ☕',
-    descripcion: 'Una nueva jornada de aprendizaje reunió a entusiastas del café en nuestro Taller de Prensa Francesa. Durante la sesión, los participantes conocieron distintas técnicas de preparación, resolvieron dudas y exploraron cómo pequeños cambios pueden influir en el perfil de sabor de cada taza. Ver a cada persona preparar su propia prensa y descubrir nuevas formas de disfrutar el café hizo de esta experiencia un encuentro enriquecedor. Gracias a todos quienes participaron y fueron parte de una nueva instancia para aprender, compartir y disfrutar juntos.'
-  }
-];
-
-/* Genera el historial de cursos dentro de #historial-cursos-grid */
-function renderHistorialCursos(){
-  const grid = document.getElementById('historial-cursos-grid');
-  grid.innerHTML = HISTORIAL_CURSOS.map(function(c){
-    return '<div class="curso">'
-      +   '<div class="lvl">Curso realizado</div>'
-      +   '<h3>' + c.titulo + '</h3>'
-      +   '<p>' + c.descripcion + '</p>'
-      + '</div>';
-  }).join('');
-}
-
-/* =====================================================
-   CATÁLOGO — array de productos
-   Para agregar un producto nuevo, añade un objeto con este formato:
-   {
-     nombre:      "Nombre del producto",
-     categoria:   "Café" | "Cafeteras" | "Molinillos" | "Tazas" | "Accesorios",
-     descripcion: "Breve descripción del producto.",
-     precio:      "$XX.XXX",
-     imagen:      "assets/catalogo/nombre-del-archivo.jpg",
-     nota:        "Texto adicional opcional (ej: venta mínima, pack, etc.)"
-   }
-   ===================================================== */
-const CATALOGO = [
-
-  /* — CAFÉS — */
-  {
-    nombre:      'Perú Cajamarca',
-    categoria:   'Café',
-    descripcion: 'Café de altura con notas de frutos secos, chocolate y suave acidez cítrica.',
-    precio:      '$16.000',
-    imagen:      'assets/fotos/perucajamarca.jpeg',
-    nota:        ''
-  },
-  {
-    nombre:      'Colombia Huila',
-    categoria:   'Café',
-    descripcion: 'Perfil dulce y jugoso con acidez brillante. Excelente en filtrado y espresso.',
-    precio:      '$16.000',
-    imagen:      'assets/fotos/colombiahuila.jpeg',
-    nota:        ''
-  },
-  {
-    nombre:      'Línea Espresso / Barra Comercial',
-    categoria:   'Café',
-    descripcion: 'Blend diseñado para barra de alta demanda. Consistente, con cuerpo y crema abundante.',
-    precio:      '$35.000',
-    imagen:      'assets/fotos/cafebolivia2.jpeg',
-    nota:        'Venta mínima 3 kg'
-  },
-
-  /* — CAFETERAS — */
-  {
-    nombre:      'Cafetera Francesa 350 ml',
-    categoria:   'Cafeteras',
-    descripcion: 'Prensa francesa ideal para 1-2 tazas. Resalta el cuerpo y la textura del café.',
-    precio:      '$10.000',
-    imagen:      'https://amazonaws.ipos.mx/fotos/4135/producto/m_t_ebe4a63bec6143b4ab206f293e58f546_29012026080558.jpg',
-    nota:        ''
-  },
-  {
-    nombre:      'Cafetera Francesa 600 ml',
-    categoria:   'Cafeteras',
-    descripcion: 'Mayor capacidad para 3-4 tazas, perfecta para compartir en casa u oficina.',
-    precio:      '$16.000',
-    imagen:      'https://http2.mlstatic.com/D_NQ_NP_661719-MLC92294471218_092025-O.webp',
-    nota:        ''
-  },
-  {
-    nombre:      'Cafetera Italiana 350 ml',
-    categoria:   'Cafeteras',
-    descripcion: 'Moka clásica de aluminio. Extrae un espresso concentrado y aromático sobre la hornilla.',
-    precio:      '$24.000',
-    imagen:      'assets/fotos/cafeteraitaliana.jpeg',
-    nota:        ''
-  },
-  {
-    nombre:      'Cafetera 3 en 1 EasyWays ',
-    categoria:   'Cafeteras',
-    descripcion: 'Versátil: prepara espresso, café de filtro y cápsulas en un solo equipo compacto.',
-    precio:      '$149.990',
-    imagen:      'assets/fotos/cafetera3en1.jpeg',
-    nota:        ''
-  },
-
-  /* — MOLINILLOS — */
-  {
-    nombre:      'Molinillo Manual',
-    categoria:   'Molinillos',
-    descripcion: 'Muelas cerámicas con molienda precisa y ajustable. Silencioso y portátil.',
-    precio:      '$20.000',
-    imagen:      'https://http2.mlstatic.com/D_Q_NP_825118-MLU73695808151_122023-O.webp',
-    nota:        ''
-  },
-
-  /* — TAZAS — */
-  {
-    nombre:      'Taza Segafredo Espresso 60 ml',
-    categoria:   'Tazas',
-    descripcion: 'Porcelana gruesa que conserva la temperatura del espresso. Diseño clásico italiano.',
-    precio:      '$10.000',
-    imagen:      'assets/fotos/tazaz60ml.jpeg',
-    nota:        ''
-  },
-  {
-    nombre:      'Taza Segafredo Cappuccino 140 ml',
-    categoria:   'Tazas',
-    descripcion: 'Taza amplia y estable, ideal para cappuccino con espacio para latte art.',
-    precio:      '$10.900',
-    imagen:      'assets/fotos/tazaz140ml.jpeg',
-    nota:        ''
-  },
-  {
-    nombre:      'Taza Segafredo Latte 200 ml',
-    categoria:   'Tazas',
-    descripcion: 'Gran capacidad para latte o flat white. Asa ergonómica y porcelana resistente.',
-    precio:      '$12.500',
-    imagen:      'assets/fotos/tazaz200ml.jpeg',
-    nota:        ''
-  },
-
-  /* — ACCESORIOS — */
-  {
-    nombre:      'Distribuidor de café',
-    categoria:   'Accesorios',
-    descripcion: 'Herramienta para nivelar el café molido en el portafiltro y lograr extracción pareja.',
-    precio:      '$5.000',
-    imagen:      'assets/fotos/dcafe.png',
-    nota:        ''
-  },
-  {
-    nombre:      'Pinchi para comandas',
-    categoria:   'Accesorios',
-    descripcion: 'Pincho metálico de barra para mantener ordenadas las comandas durante el servicio.',
-    precio:      '$5.100',
-    imagen:      'https://http2.mlstatic.com/D_NQ_NP_972810-CBT111421779033_052026-O.webp',
-    nota:        ''
-  },
-  {
-    nombre:      'Pinzas de acero inoxidable',
-    categoria:   'Accesorios',
-    descripcion: 'Pinzas de acero inoxidable para manejo higiénico de pasteles, azúcar y garnish.',
-    precio:      '$6.500',
-    imagen:      'https://http2.mlstatic.com/D_Q_NP_727244-CBT83891323164_042025-O.webp',
-    nota:        ''
-  },
-  {
-    nombre:      'Filtro V60 02 (50 unidades)',
-    categoria:   'Accesorios',
-    descripcion: 'Filtros de papel blancos tamaño 02 compatibles con la cafetera V60 Hario.',
-    precio:      '$8.000',
-    imagen:      'https://http2.mlstatic.com/D_NQ_NP_840187-MLB109976369019_042026-O.webp',
-    nota:        'Pack de 50 unidades'
-  },
-  {
-    nombre:      'Lápiz para Latte Art',
-    categoria:   'Accesorios',
-    descripcion: 'Punta fina de acero para crear diseños elaborados y precisos en la espuma de leche.',
-    precio:      '$8.000',
-    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_809445-CBT110726976767_042026-P.webp',
-    nota:        ''
-  },
-  {
-    nombre:      'Tamping Mat',
-    categoria:   'Accesorios',
-    descripcion: 'Alfombrilla antideslizante de silicona para apoyar el portafiltro al prensar.',
-    precio:      '$13.000',
-    imagen:      'https://http2.mlstatic.com/D_Q_NP_2X_989433-MLC94389061597_102025-P.webp',
-    nota:        ''
-  }
-];
-
-  /* SVG de WhatsApp reutilizado en cada tarjeta */
-  const _WA_SVG = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>';
-
-  /* Estado del filtro y la búsqueda */
-  let _catFiltro   = 'Todas';
-  let _catBusqueda = '';
-
-  /* Elimina tildes para comparar sin acentos */
-  function _sinTildes(str){
-    return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-  }
-
-  /* Genera y muestra las tarjetas según el filtro y búsqueda actuales */
-  function renderCatalogo(){
-    const grid    = document.getElementById('catalogo-grid');
-    const termino = _sinTildes(_catBusqueda);
-
-    const filtrados = CATALOGO.filter(function(p){
-      const coincideCategoria = _catFiltro === 'Todas' || p.categoria === _catFiltro;
-      const texto = _sinTildes(p.nombre + ' ' + p.descripcion + ' ' + p.categoria);
-      const coincideBusqueda  = !termino || texto.includes(termino);
-      return coincideCategoria && coincideBusqueda;
-    });
-
-    if(filtrados.length === 0){
-      grid.innerHTML = '<p class="cat-empty">No se encontraron productos para esa búsqueda.</p>';
-      return;
-    }
-
-    grid.innerHTML = filtrados.map(function(p){
-      /* Mensaje de WhatsApp con el nombre del producto */
-      var msg = encodeURIComponent(
-        'Hola, vi el producto *' + p.nombre + '* en su catálogo. ¿Está disponible? ¿Cuál es su precio actualizado?'
-      );
-      /* Nota opcional (ej: venta mínima, pack de unidades) */
-      var notaHtml = p.nota ? '<p class="cat-nota">' + p.nota + '</p>' : '';
-      /* Imagen con fallback cuando el archivo aún no existe */
-      var imgHtml  = '<img src="' + p.imagen + '" alt="' + p.nombre + '" loading="lazy" '
-        + 'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
-        + '<div class="img-placeholder">☕</div>';
-
-      return '<article class="cat-card">'
-        + '<div class="img-wrap">' + imgHtml + '</div>'
-        + '<div class="cat-body">'
-        +   '<span class="cat-tag-badge">' + p.categoria + '</span>'
-        +   '<h3>' + p.nombre + '</h3>'
-        +   '<p class="cat-desc">' + p.descripcion + '</p>'
-        +   notaHtml
-        +   '<p class="cat-price">' + p.precio + '</p>'
-        +   '<a class="wa" href="https://wa.me/' + WHATSAPP + '?text=' + msg + '" '
-        +     'target="_blank" rel="noopener">'
-        +     _WA_SVG + ' Consultar disponibilidad'
-        +   '</a>'
-        + '</div>'
-        + '</article>';
-    }).join('');
-  }
-
-  /* Cambia el filtro de categoría activo */
-  function setCatFiltro(categoria, btnEl){
-    _catFiltro = categoria;
-    document.querySelectorAll('.cat-btn').forEach(function(b){ b.classList.remove('active'); });
-    btnEl.classList.add('active');
-    renderCatalogo();
-  }
-
-  /* Inicializar catálogo al cargar la página */
-  document.addEventListener('DOMContentLoaded', function(){
-    renderEventos();
-    renderProximosCursos();
-    renderHistorialCursos();
-    renderCatalogo();
-
-    /* Buscador con pequeño debounce para no re-renderizar en cada tecla */
-    var searchInput  = document.getElementById('cat-search');
-    var debounceTimer;
-    searchInput.addEventListener('input', function(){
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(function(){
-        _catBusqueda = searchInput.value.trim();
-        renderCatalogo();
-      }, 220);
-    });
-  });
-</script>
 </body>
 </html>
