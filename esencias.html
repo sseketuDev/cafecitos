@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complementos de Sabor · Esencias 1883 · Cafecitos</title>
+    <meta name="description" content="Esencias premium 1883, chocolate caliente Fiorentini y dispensadores para darle un toque especial a tus bebidas." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styleindex.css" />
+    <link rel="icon" type="image/jpeg" href="LOGO.JPG" />
+</head>
+<body>
+
+    <!-- ======== NAV ======== -->
+    <nav>
+        <div class="wrap">
+            <a href="index.html" class="brandmark">
+                <img src="LOGO.jpg" alt="Cafecitos" />
+                <b>CAFECITOS</b>
+            </a>
+            <div class="navlinks">
+                <a href="productos.html">Productos</a>
+                <a href="maquinas.html" class="active">Máquinas</a>
+                <a href="index.html#actividades">Actividades</a>
+                <a href="index.html#nosotros">Nosotros</a>
+            </div>
+            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20m%C3%A1quinas" target="_blank" rel="noopener" class="nav-wa">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+
+            <!-- Botón hamburguesa (solo móvil) -->
+            <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======== MENÚ LATERAL MÓVIL ======== -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-head">
+            <a href="index.html" class="brandmark">
+                <img src="LOGO.jpg" alt="Cafecitos" />
+                <b>CAFECITOS</b>
+            </a>
+            <button type="button" class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu-links">
+            <a href="productos.html">Productos</a>
+            <a href="maquinas.html" class="active">Máquinas</a>
+            <a href="index.html#actividades">Actividades</a>
+            <a href="index.html#nosotros">Nosotros</a>
+        </nav>
+        <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20m%C3%A1quinas" target="_blank" rel="noopener" class="btn btn-wa mobile-menu-wa">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+            Consultar por esencias
+        </a>
+    </aside>
+
+    <!-- ======== HEADER ======== -->
+    <section class="page-header">
+        <div class="wrap">
+            <div class="page-header-copy">
+                <span class="kicker">Cafecitos · Navegación</span>
+                <h1>Complementos de Sabor</h1>
+                <p>Esencias premium 1883, chocolate caliente Fiorentini y dispensadores para darle un toque especial a tus bebidas.</p>
+            </div>
+            <div class="page-header-links" aria-label="Enlaces rápidos">
+                <a href="index.html" class="page-header-link">Inicio</a>
+                <a href="productos.html" class="page-header-link">Productos</a>
+                <a href="maquinas.html" class="page-header-link">Máquinas</a>
+                <a href="molinos.html" class="page-header-link">Molinos</a>
+                <a href="esencias.html" class="page-header-link active">Esencias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== TABS DE NAVEGACIÓN ENTRE CATEGORÍAS ======== -->
+    <div class="maquinas-tabs-wrap">
+        <div class="wrap">
+            <nav class="maquinas-tabs">
+                <a href="maquinas.html" class="maquinas-tab">Maquinaria La Rocca</a>
+                <a href="molinos.html" class="maquinas-tab">Molinos</a>
+                <a href="esencias.html" class="maquinas-tab active">Complementos de Sabor</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ======== SECCIÓN 3: COMPLEMENTOS DE SABOR ======== -->
+        <section class="categoria-seccion">
+            <div class="wrap">
+                <div class="categoria-head">
+                    <span class="kicker">Sabor y calidad</span>
+                    <h2>Complementos de Sabor</h2>
+                    <p>Esencias premium 1883, chocolate caliente Fiorentini y dispensadores para darle un toque especial a tus bebidas.</p>
+                </div>
+    
+                <div class="productos-grid">
+                    <!-- Esencia Vainilla -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFtXeBOgXtntAQxMe3U-Pf2QPdXRMFm6lt9c6kPzllWg&s" alt="Esencia Vainilla 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Vainilla</h3>
+                            <p class="desc">Esencia premium de vainilla para café, chocolates y bebidas. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Vainilla%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Caramelo -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Ix4Wbo09llkKlT7Gupj0F02bkM9UmEWdmg48_xQWwA&s=10" alt="Esencia Caramelo 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Caramelo</h3>
+                            <p class="desc">Esencia premium de caramelo para café, chocolates y bebidas. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Caramelo%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Té Chai -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPjF9vvHvzEJUKGy44p8ydDzShjbAcwzvQ6Kp0qe5oog&s=10"alt="Esencia Té Chai 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Té Chai</h3>
+                            <p class="desc">Esencia premium de té chai para bebidas calientes y frías. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20T%C3%A9%20Chai%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Amaretto -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgK2MZi7xKh8tTAX0LDhOTsld3be7tlh3l3ey8aVVDHA&s" alt="Esencia Amaretto 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Amaretto</h3>
+                            <p class="desc">Esencia premium de amaretto para café, chocolates y bebidas. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Amaretto%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Durazno -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rt3uvTxBHIhZYbXy0hImylexsUG_8Ytht3hX8ueqmA&s=10" alt="Esencia Durazno 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Durazno</h3>
+                            <p class="desc">Esencia premium de durazno para bebidas frías y calientes. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Durazno%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Frutilla -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGPzyfBOBk-e_IbEM9nP37H48DRt-AJ2DFqbzUUGoCcA&s=10" alt="Esencia Frutilla 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Frutilla</h3>
+                            <p class="desc">Esencia premium de frutilla para bebidas y postres. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Frutilla%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Irish Cream -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR54rYZhhiTGsrWlyC9TDjzf9ik_ptyYO93VNvOnfjWAg&s=10" alt="Esencia Irish Cream 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Irish Cream</h3>
+                            <p class="desc">Esencia premium de Irish Cream para café y bebidas especiales. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Irish%20Cream%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Esencia Menta -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ6zGRwsRja6LY8j5wCEOBNquGcGilSqATWYjc7tNcow&s=10" alt="Esencia Menta 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Esencia</span>
+                            <h3>Esencia Menta</h3>
+                            <p class="desc">Esencia premium de menta para bebidas refrescantes y especiales. Calidad profesional 1883.</p>
+                            <p class="precio">$21.000 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20la%20Esencia%20Menta%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Chocolate Caliente Fiorentini -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5msgTsOzijiwyUgXRFYZfSzUT_94RnisRXNOzOh2MQ&s=10" alt="Chocolate Caliente Fiorentini" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">Fiorentini</span>
+                            <h3>Chocolate Caliente</h3>
+                            <p class="desc">Chocolate caliente premium 1kg. Perfecto para acompañar tu café o preparar bebidas especiales.</p>
+                            <p class="precio">$22.681 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20el%20Chocolate%20Caliente%20Fiorentini" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Dispensador de Esencia -->
+                    <div class="producto-card">
+                        <div class="img-wrap">
+                            <img src="assets/fotos/dispensador-1883.jpg" alt="Dispensador de Esencia 1883" loading="lazy" onerror="this.src='assets/fotos/placeholder.jpg'" />
+                        </div>
+                        <div class="body">
+                            <span class="tag">1883 · Dispensador</span>
+                            <h3>Dispensador de Esencia</h3>
+                            <p class="desc">Dispensador práctico y elegante para tus esencias 1883. Ideal para barras profesionales.</p>
+                            <p class="precio">$6.303 + IVA</p>
+                            <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20el%20Dispensador%20de%20Esencia%201883" target="_blank" rel="noopener" class="btn btn-wa">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ======== CTA FINAL ======== -->
+    <section class="cta-final">
+        <div class="wrap">
+            <div class="cta-final-card">
+                <h2>¿Quieres darle un toque especial a tu carta?</h2>
+                <p>Te asesoramos con las mejores esencias y complementos para tu cafetería o negocio.</p>
+                <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20asesor%C3%ADa%20sobre%20esencias%20y%20complementos" target="_blank" rel="noopener" class="btn btn-wa btn-large">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+                    Hablar con un asesor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <a class="whatsapp-float" href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quiero%20consultar%20por%20esencias%20y%20complementos" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+    </a>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="wrap foot-grid">
+            <a href="index.html" class="brandmark"><img src="LOGO.jpg" alt="Cafecitos" /><b>CAFECITOS</b></a>
+            <div class="footer-info">
+                <p>Café de especialidad y tostaduría · Valle del Aconcagua, Chile</p>
+                <p>Esmeralda 1380, Los Andes · Santa Rosa · Open Plaza San Felipe</p>
+                <a href="https://wa.me/56959645371" target="_blank" rel="noopener">📱 +56 9 9596 45371</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* =====================================================
+           MENÚ LATERAL MÓVIL (hamburguesa)
+           ===================================================== */
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function abrirMenuMovil() {
+            mobileMenu.classList.add('is-open');
+            mobileOverlay.classList.add('is-open');
+            hamburger.classList.add('is-active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+        }
+
+        function cerrarMenuMovil() {
+            mobileMenu.classList.remove('is-open');
+            mobileOverlay.classList.remove('is-open');
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('no-scroll');
+        }
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                const abierto = mobileMenu.classList.contains('is-open');
+                abierto ? cerrarMenuMovil() : abrirMenuMovil();
+            });
+        }
+
+        if (mobileClose) mobileClose.addEventListener('click', cerrarMenuMovil);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', cerrarMenuMovil);
+
+        // Cierra el menú al hacer clic en cualquier enlace del panel
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', cerrarMenuMovil);
+        });
+
+        // Cierra el menú con la tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') cerrarMenuMovil();
+        });
+    </script>
+
+</body>
+</html>

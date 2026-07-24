@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="styleindex.css" />
     <link rel="icon" type="image/jpeg" href="LOGO.JPG" />
 </head>
 <body>
@@ -23,6 +23,8 @@
             <div class="navlinks">
                 <a href="productos.html">Productos</a>
                 <a href="maquinas.html">Máquinas</a>
+                <a href="molinos.html">Molinos</a>
+                <a href="esencias.html">Esencias</a>
                 <a href="#actividades">Actividades</a>
                 <a href="#nosotros">Nosotros</a>
             </div>
@@ -30,8 +32,44 @@
                 <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
                 <span>WhatsApp</span>
             </a>
+
+            <!-- Botón hamburguesa (solo móvil) -->
+            <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- ======== MENÚ LATERAL MÓVIL ======== -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-head">
+            <a href="index.html" class="brandmark">
+                <img src="LOGO.jpg" alt="Cafecitos" />
+                <b>CAFECITOS</b>
+            </a>
+            <button type="button" class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu-links">
+            <a href="productos.html">Productos</a>
+            <a href="molinos.html">Molinos</a>
+            <a href="esencias.html">Esencias</a>
+            <a href="maquinas.html">Máquinas</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+        <a href="https://wa.me/56959645371?text=Hola%20Cafecitos%2C%20quisiera%20recibir%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-wa mobile-menu-wa">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.3.1.4.1.6-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>
+            Escríbenos por WhatsApp
+        </a>
+    </aside>
 
     <!-- ======== HERO — FULLSCREEN ======== -->
     <header id="hero">
@@ -66,6 +104,13 @@
                     </svg>
                     Ver Máquinas
                 </a>
+            </div>
+            <div class="hero-nav-pills" aria-label="Secciones rápidas">
+                <a href="index.html" class="hero-nav-pill active">Inicio</a>
+                <a href="productos.html" class="hero-nav-pill">Productos</a>
+                <a href="maquinas.html" class="hero-nav-pill">Máquinas</a>
+                <a href="molinos.html" class="hero-nav-pill">Molinos</a>
+                <a href="esencias.html" class="hero-nav-pill">Esencias</a>
             </div>
         </div>
 
@@ -223,6 +268,52 @@
     </a>
 
     <script>
+        /* =====================================================
+           MENÚ LATERAL MÓVIL (hamburguesa)
+           ===================================================== */
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function abrirMenuMovil() {
+            mobileMenu.classList.add('is-open');
+            mobileOverlay.classList.add('is-open');
+            hamburger.classList.add('is-active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+        }
+
+        function cerrarMenuMovil() {
+            mobileMenu.classList.remove('is-open');
+            mobileOverlay.classList.remove('is-open');
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('no-scroll');
+        }
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                const abierto = mobileMenu.classList.contains('is-open');
+                abierto ? cerrarMenuMovil() : abrirMenuMovil();
+            });
+        }
+
+        if (mobileClose) mobileClose.addEventListener('click', cerrarMenuMovil);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', cerrarMenuMovil);
+
+        // Cierra el menú al hacer clic en cualquier enlace del panel
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', cerrarMenuMovil);
+        });
+
+        // Cierra el menú con la tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') cerrarMenuMovil();
+        });
+
         const inscripcionForm = document.getElementById('inscripcion-form');
 
         if (inscripcionForm) {
